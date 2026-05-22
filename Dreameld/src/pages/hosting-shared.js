@@ -22,8 +22,9 @@ export default function HostingShared(){
             <div className="absolute inset-0 bg-sky-500/5"></div>
             <div className="container relative">
                 <div className="grid grid-cols-1 text-center mt-12">
-                    <h3 className="text-4xl leading-normal font-semibold mb-6">Shared Web Hosting</h3>
-                    <p className="text-slate-400 text-[17px] max-w-xl mx-auto">Create, collaborate, and turn your ideas into incredible products with the definitive platform for digital design.</p>
+                    <h3 className="text-4xl leading-normal font-semibold mb-6">Hosting rápido y seguro con activación inmediata
+Soporte real por WhatsApp cuando lo necesites.</h3>
+                    <p className="text-slate-400 text-[17px] max-w-xl mx-auto">Sin complicaciones. Sin tecnicismos. Nosotros te ayudamos.</p>
 
                     <ul className="tracking-[0.5px] mt-6 inline-block">
                         <li className="inline-block uppercase text-[13px] font-semibold duration-500 ease-in-out hover:text-sky-500"><Link to="/index">Hoxia</Link></li>
