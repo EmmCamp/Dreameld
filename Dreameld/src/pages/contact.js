@@ -114,14 +114,11 @@ export default function Contact() {
                 </div>
 
                 <div className="container lg:mt-24 mt-16">
-
                     <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[30px]">
                         <div className="text-center px-6">
-                            <div className="relative">
-                                {/* Usamos style para obligar al fondo morado clarito */}
-                                <div className="w-14 h-14 rounded-xl text-2xl flex align-middle justify-center items-center mx-auto shadow-sm dark:shadow-gray-800" style={{ backgroundColor: 'rgba(147, 51, 234, 0.1)' }}>
-                                    {/* Forzamos el color morado directo en el icono con style */}
-                                    <BsTelephone style={{ color: '#9333ea', width: '24px', height: '24px' }} />
+                            <div className="relative text-transparent">
+                                <div className="w-14 h-14 bg-sky-500/5 text-sky-500 rounded-xl text-2xl flex align-middle justify-center items-center mx-auto shadow-sm dark:shadow-gray-800">
+                                    <BsTelephone />
                                 </div>
                             </div>
 
@@ -130,15 +127,15 @@ export default function Contact() {
                                 <p className="text-slate-400 mt-3">Atención rápida y personalizada.</p><p>Resolvemos tus dudas en minutos para que no te detengas.</p>
 
                                 <div className="mt-4">
-                                    <li className="inline-block text-[15px] font-medium duration-500 ease-in-out" style={{ color: '#7c3aed' }}>449 123 4567</li>
+                                    <Link to="tel:+152534-468-854" className="relative inline-block tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-sky-500 hover:text-sky-500 after:bg-sky-500 duration-500 ease-in-out">+152 534-468-854</Link>
                                 </div>
                             </div>
                         </div>
 
                         <div className="text-center px-6">
-                            <div className="relative">
-                                <div className="w-14 h-14 rounded-xl text-2xl flex align-middle justify-center items-center mx-auto shadow-sm dark:shadow-gray-800" style={{ backgroundColor: 'rgba(147, 51, 234, 0.1)' }}>
-                                    <LuMail style={{ color: '#9333ea', width: '24px', height: '24px' }} />
+                            <div className="relative text-transparent">
+                                <div className="w-14 h-14 bg-sky-500/5 text-sky-500 rounded-xl text-2xl flex align-middle justify-center items-center mx-auto shadow-sm dark:shadow-gray-800">
+                                    <LuMail />
                                 </div>
                             </div>
 
@@ -147,15 +144,15 @@ export default function Contact() {
                                 <p className="text-slate-400 mt-3">Escríbenos para cotizaciones especiales o soporte técnico experto.</p><p>Respondemos a la brevedad.</p>
 
                                 <div className="mt-4">
-                                    <li className="inline-block text-[15px] font-medium duration-500 ease-in-out" style={{ color: '#7c3aed' }}>Contacto@dreameld.com.mx</li>
+                                    <Link to="mailto:contacto@dreameld.com.mx" className="relative inline-block tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-violet-600 hover:text-violet-700 after:bg-violet-600 duration-500 ease-in-out">contacto@dreameld.com.mx</Link>
                                 </div>
                             </div>
                         </div>
 
                         <div className="text-center px-6">
-                            <div className="relative">
-                                <div className="w-14 h-14 rounded-xl text-2xl flex align-middle justify-center items-center mx-auto shadow-sm dark:shadow-gray-800" style={{ backgroundColor: 'rgba(147, 51, 234, 0.1)' }}>
-                                    <FiMapPin style={{ color: '#9333ea', width: '24px', height: '24px' }} />
+                            <div className="relative text-transparent">
+                                <div className="w-14 h-14 bg-sky-500/5 text-sky-500 rounded-xl text-2xl flex align-middle justify-center items-center mx-auto shadow-sm dark:shadow-gray-800">
+                                    <FiMapPin />
                                 </div>
                             </div>
 
@@ -170,7 +167,7 @@ export default function Contact() {
                                         rel="noopener noreferrer"
                                         className="read-more lightbox relative inline-block tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-sky-500 hover:text-sky-500 after:bg-sky-500 duration-500 ease-in-out"
                                     >
-                                        <li className="inline-block text-[15px] font-medium duration-500 ease-in-out" style={{ color: '#7c3aed' }}>Chatea con nosotros</li>
+                                        Chatea con nosotros
                                     </Link>
                                 </div>
                             </div>

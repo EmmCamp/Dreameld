@@ -78,21 +78,38 @@ export default function Navbar({ navClass, ulClass, navLight }) {
         <nav id="topnav" className={`${scroll ? 'nav-sticky' : ''} ${navClass}`}>
             <div className="container relative">
                 
-                {/* === LOGO NUEVO DE DREAMELD (TAMAÑO CORREGIDO) === */}
-                <Link className="logo flex items-center" to="/index" style={{ height: 'auto', padding: '10px 0' }}>
-                    <img 
-                        src="/Dream1.png" 
-                        alt="Dreameld" 
-                        style={{ 
-                            height: '85px', 
-                            width: 'auto', 
-                            maxHeight: 'none', 
-                            maxWidth: '220px',
-                            display: 'block',
-                            objectFit: 'contain'
-                        }} 
-                    />
-                </Link>
+                {/* === LOGO DINÁMICO DE DREAMELD (CAMBIA EN MOTO OSCURO) === */}
+<Link className="logo flex items-center" to="/index" style={{ height: 'auto', padding: '10px 0' }}>
+    {/* LOGO VERSIÓN DÍA: Se muestra normalmente, se oculta en dark mode */}
+    <img 
+        src="/Dream1.png" 
+        className="inline-block dark:hidden"
+        alt="Dreameld" 
+        style={{ 
+            height: '85px', 
+            width: 'auto', 
+            maxHeight: 'none', 
+            maxWidth: '220px',
+            display: 'block',
+            objectFit: 'contain'
+        }} 
+    />
+    {/* LOGO VERSIÓN NOCHE: Se oculta normalmente, aparece solo en dark mode */}
+    <img 
+        src="/Dreameld_3A.png" 
+        className="hidden dark:inline-block"
+        alt="Dreameld Night" 
+        style={{ 
+            height: '85px', 
+            width: 'auto', 
+            maxHeight: 'none', 
+            maxWidth: '220px',
+            display: 'block',
+            objectFit: 'contain'
+        }} 
+    />
+</Link>
+{/* === AQUÍ TERMINA LOGO DINÁMICO === */}
                 {/* === AQUÍ TERMINA LOGO NUEVO === */}
 
                 {/* ===================================== */}
