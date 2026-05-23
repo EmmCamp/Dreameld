@@ -26,7 +26,7 @@ export default function Contact() {
                     <ul className="tracking-[0.5px] mb-0 inline-block">
                         <li className="inline-block text-[15px] font-medium duration-500 ease-in-out hover:text-sky-500"><Link to="/index">DREAMELD</Link></li>
                         <li className="inline-block text-[15px] ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
-                       <li className="inline-block text-[15px] font-medium duration-500 ease-in-out" style={{ color: '#7c3aed' }}>Contacto</li>
+                        <li className="inline-block text-[15px] font-medium duration-500 ease-in-out" style={{ color: '#7c3aed' }}>Contacto</li>
                     </ul>
                 </div>
             </section>
@@ -41,7 +41,16 @@ export default function Contact() {
                 <div className="container">
                     <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
                         <div className="lg:col-span-7 md:col-span-6">
-                            <img src={contactImg} alt="" />
+
+                            {/* === Imagen aun lado del formulario anterior === */}
+                            {/* <img src={contactImg} alt="" />*/}
+                            {/* === Imagen anterior=== */}
+                            <img
+                                src="/soporte-dreameld.png"
+                                className="w-full h-auto object-contain rounded-2xl shadow-md"
+                                alt="Soporte Express Dreameld"
+                                style={{ maxHeight: '460px', display: 'block' }}
+                            />
                         </div>
 
                         <div className="lg:col-span-5 md:col-span-6">
