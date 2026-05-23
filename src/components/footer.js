@@ -53,113 +53,128 @@ export default function Footer(){
 /* Footer de prueba basado en WP */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { LuServer } from 'react-icons/lu'; // Icono para hosting
+import { FiFacebook, FiTwitter, FiYoutube } from 'react-icons/fi'; // Iconos de redes
 
 export default function Footer() {
-  return (
-    <footer style={{ display: 'block', width: '100%' }}>
-      
-      {/* SECCIÓN SUPERIOR: Contenido Morado Oscuro */}
-      <div 
-        style={{ 
-          backgroundColor: '#1a0933', 
-          color: '#cbd5e1', 
-          paddingTop: '4rem', 
-          paddingBottom: '3rem' 
-        }}
-      >
-        {/* Agregamos md:gap-x-16 para dar un espacio chingón entre cada columna */}
-        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-x-16">
-          
-          {/* Columna 1: Logo, Eslogan contenido y Redes */}
-          {/* El md:max-w-[240px] obliga al eslogan a quebrarse antes y no pegarse a Servicios */}
-          <div className="flex flex-col space-y-4 w-full md:max-w-[240px]">
-            <img 
-              src="/Dlogo.jpeg" 
-              alt="Dreameld Logo" 
-              className="w-24 h-auto rounded-lg object-contain block" 
-            /> 
-            <p className="text-sm leading-relaxed block" style={{ color: '#94a3b8' }}>
-              Llevando tu infraestructura digital al siguiente nivel con hosting de alta fidelidad.
-            </p>
+    return (
+        <footer style={{ backgroundColor: '#16082c', color: '#b3b3b3', position: 'relative', width: '100%' }}>
             
-            {/* Redes Sociales SVGs en Blanco */}
-            <div className="flex space-x-3 pt-2">
-              {/* Facebook */}
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-9 h-9 rounded flex items-center justify-center hover:bg-blue-600 transition" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff' }}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff">
-                  <path d="M9.19795 21.5H13.198V13.4901H16.8021L17.1979 9.50977H13.198V7.51978C13.198 6.51978 13.198 5.50977 15.1979 5.50977H17.1979V1.5H13.198C9.19795 1.5 9.19795 3.5 9.19795 6.51978V9.50977H6.19795L5.802 13.4901H9.19795V21.5Z" />
-                </svg>
-              </a>
+            {/* CONTENEDOR PRINCIPAL CENTRAL (Evita que el texto se pegue a la izquierda) */}
+            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '60px 24px' }}>
+                
+                {/* GRID DE 4 COLUMNAS */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-y-10 gap-x-8 text-start">
+                    
+                    {/* COLUMNA 1: LOGO Y TEXTO */}
+                    <div className="md:pr-6">
+                       <div style={{ marginBottom: '16px' }}>
+    <img src="/Dreameld_3B.png" style={{ height: '55px', width: 'auto', display: 'block' }} alt="Dreameld" />
+</div>
+                        
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            Llevando tu infraestructura digital al siguiente nivel de forma segura y profesional.
+                        </p>
+                        
+                        {/* REDES SOCIALES */}
+                        <ul className="list-none space-x-3 mt-6 flex items-center">
+                            <li>
+                                <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 hover:bg-[#9333ea] text-gray-400 hover:text-white transition-all duration-300">
+                                    <FiFacebook className="w-4 h-4" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com" target="_blank" rel="noreferrer" className="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 hover:bg-[#9333ea] text-gray-400 hover:text-white transition-all duration-300">
+                                    <FiTwitter className="w-4 h-4" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://youtube.com" target="_blank" rel="noreferrer" className="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 hover:bg-[#9333ea] text-gray-400 hover:text-white transition-all duration-300">
+                                    <FiYoutube className="w-4 h-4" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-              {/* Twitter (X) */}
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="w-9 h-9 rounded flex items-center justify-center hover:bg-sky-400 transition" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff' }}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff">
-                  <path d="M1.33203 2.5L9.66602 12.3164L1.33203 22.1328H3.33203L10.666 13.4414L16.666 22.1328H23.666L14.666 11.5L22.332 2.5H20.332L13.666 10.375L8.33203 2.5H1.33203ZM4.33203 4.5H7.33203L19.666 20.1328H16.666L4.33203 4.5Z" />
-                </svg>
-              </a>
+                    {/* COLUMNA 2: SERVICIOS */}
+                    <div>
+                        <h5 className="text-white font-semibold tracking-wide text-base mb-6">Servicios</h5>
+                        <ul className="list-none space-y-3">
+                            <li><Link to="/licencias" className="text-gray-400 hover:text-white duration-300 block">💻 Licencias Microsoft</Link></li>
+                            <li><Link to="/desarrollo-web" className="text-gray-400 hover:text-white duration-300 block">🌐 Desarrollo Web</Link></li>
+                            <li><Link to="/hosting" className="text-gray-400 hover:text-white duration-300 flex items-center gap-2">
+                                <LuServer className="w-4 h-4 text-[#9333ea]" /> Hosting
+                            </Link></li>
+                        </ul>
+                    </div>
 
-              {/* YouTube */}
-              <a href="https://youtube.com" target="_blank" rel="noreferrer" className="w-9 h-9 rounded flex items-center justify-center hover:bg-red-600 transition" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff' }}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff">
-                  <path d="M23.666 6.33203C23.666 6.33203 23.332 4.16602 22.332 3.16602C21.166 1.83203 19.832 1.83203 19.166 1.66602C14.666 1.33203 11.666 1.33203 11.666 1.33203H11.666H11.666C11.666 1.33203 8.66602 1.33203 4.16602 1.66602C3.49902 1.83203 2.16602 1.83203 0.999023 3.16602C0.166023 4.16602 0.166023 6.33203 0.166023 6.33203S0 8.33203 0 10.332V12.332C0 14.332 0.166023 16.332 0.166023 16.332S0.499023 18.498 1.49902 19.498C2.66602 20.832 3.83203 20.832 4.49902 20.998C6.99902 21.332 11.666 21.332 11.666 21.332H11.666C11.666 21.332 16.333 21.332 18.833 20.998C19.499 20.832 20.832 20.832 21.999 19.498C22.999 18.498 23.332 16.332 23.332 16.332S23.666 14.332 23.666 12.332V10.332C23.666 8.33203 23.332 6.33203 23.332 6.33203ZM9.33203 15.332V7.33203L16 11.332L9.33203 15.332Z" />
-                </svg>
-              </a>
+                    {/* COLUMNA 3: AYUDA */}
+                    <div>
+                        <h5 className="text-white font-semibold tracking-wide text-base mb-6">Ayuda</h5>
+                        <ul className="list-none space-y-3">
+                            <li><Link to="/aboutus" className="text-gray-400 hover:text-white duration-300 block">➔ Sobre Nosotros</Link></li>
+                            <li><Link to="/contact" className="text-gray-400 hover:text-white duration-300 block">➔ Contacto</Link></li>
+                            <li><Link to="/faqs" className="text-gray-400 hover:text-white duration-300 block">➔ Preguntas Frecuentes</Link></li>
+                            <li><Link to="/manuales" className="text-gray-400 hover:text-white duration-300 block">➔ Centro de ayuda</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* COLUMNA 4: LEGAL */}
+                    <div>
+                        <h5 className="text-white font-semibold tracking-wide text-base mb-6">Legal y Pagos</h5>
+                        <ul className="list-none space-y-3">
+                            <li><Link to="/privacidad" className="text-gray-400 hover:text-white duration-300 block">➔ Aviso de Privacidad</Link></li>
+                            <li><Link to="/terminos" className="text-gray-400 hover:text-white duration-300 block">➔ Términos y Condiciones</Link></li>
+                            <li><Link to="/reembolso" className="text-gray-400 hover:text-white duration-300 block">➔ Políticas de Reembolso</Link></li>
+                        </ul>
+                    </div>
+
+                </div>
             </div>
-          </div>
 
-          {/* Columna 2: Servicios */}
-          <div>
-            <h4 style={{ color: '#fff', fontWeight: '600', fontSize: '1.125rem', marginBottom: '1rem' }}>Servicios</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link to="/licencias-microsoft" style={{ color: '#cbd5e1' }} className="hover:text-white transition">💻 Licencias Microsoft</Link></li>
-              <li><Link to="/desarrollo-wordpress" style={{ color: '#cbd5e1' }} className="hover:text-white transition">🌐 Desarrollo WordPress</Link></li>
-              <li><Link to="/poliza-mantenimiento" style={{ color: '#cbd5e1' }} className="hover:text-white transition">⚙️ Póliza de Mantenimiento</Link></li>
-              <li><Link to="/hosting-alta-fidelidad" style={{ color: '#cbd5e1' }} className="hover:text-white transition">🖲️ Hosting de Alta Fidelidad</Link></li>
-            </ul>
-          </div>
+            {/* SECCIÓN DE COPYRIGHT (Alineada abajo con fondo más oscuro) */}
+            <div style={{ backgroundColor: '#0d041b', borderTop: '1px solid rgba(255,255,255,0.05)', padding: '24px 0' }}>
+                <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }} className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                    <p>© 2026 <span className="text-white font-semibold">Dreameld</span>. Todos los derechos reservados.</p>
+                    <p className="mt-2 md:mt-0 flex items-center gap-1">
+                        ⚡ Potenciando tu infraestructura digital.
+                    </p>
+                </div>
+            </div>
 
-          {/* Columna 3: Soporte */}
-          <div>
-            <h4 style={{ color: '#fff', fontWeight: '600', fontSize: '1.125rem', marginBottom: '1rem' }}>Soporte</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link to="/sobre-nosotros" style={{ color: '#cbd5e1' }} className="hover:text-white transition">➔ Sobre Nosotros</Link></li>
-              <li><Link to="/contacto" style={{ color: '#cbd5e1' }} className="hover:text-white transition">➔ Contacto</Link></li>
-              <li><Link to="/soporte-tecnico" style={{ color: '#cbd5e1' }} className="hover:text-white transition">➔ Soporte Técnico</Link></li>
-              <li><Link to="/faq" style={{ color: '#cbd5e1' }} className="hover:text-white transition">➔ Preguntas Frecuentes (FAQ)</Link></li>
-              <li><Link to="/centro-ayuda" style={{ color: '#cbd5e1' }} className="hover:text-white transition">➔ Centro de ayuda</Link></li>
-            </ul>
-          </div>
 
-          {/* Columna 4: Legal y Pagos */}
-          <div>
-            <h4 style={{ color: '#fff', fontWeight: '600', fontSize: '1.125rem', marginBottom: '1rem' }}>Legal y Pagos</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link to="/aviso-privacidad" style={{ color: '#cbd5e1' }} className="hover:text-white transition">➔ Aviso de Privacidad</Link></li>
-              <li><Link to="/terminos-condiciones" style={{ color: '#cbd5e1' }} className="hover:text-white transition">➔ Términos y Condiciones</Link></li>
-              <li><Link to="/politicas-reembolso" style={{ color: '#cbd5e1' }} className="hover:text-white transition">➔ Políticas de Reembolso</Link></li>
-            </ul>
-          </div>
 
-        </div>
-      </div>
 
-      {/* SECCIÓN INFERIOR: Derechos Reservados */}
-      <div 
-        style={{ 
-          backgroundColor: '#0f051d', 
-          color: '#94a3b8', 
-          paddingTop: '1.25rem', 
-          paddingBottom: '1.25rem',
-          textAlign: 'center',
-          fontSize: '0.75rem',
-          borderTop: '1px solid rgba(255,255,255,0.05)'
-        }}
-      >
-        <p>
-          © 2026 <span style={{ color: '#fff', fontWeight: '600' }}>Dreameld</span>. Todos los derechos reservados. ⚡ Potenciando tu infraestructura digital.
-        </p>
-      </div>
+<a
+    href={`https://wa.me/521234567890?text=${encodeURIComponent("¡Hola, Dreameld! Me interesa obtener más información sobre sus servicios. 🚀")}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    title="Contáctanos por WhatsApp"
+    style={{
+        position: 'fixed',
+        bottom: '30px',
+        right: '30px',
+        backgroundColor: '#25D366',
+        color: 'white',
+        borderRadius: '50px',
+        width: '60px',
+        height: '60px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.4)',
+        zIndex: 999999,
+    }}
+>
+    {/* SVG Nativo de WhatsApp (Cero imports, cero errores) */}
+    <svg 
+        viewBox="0 0 24 24" 
+        style={{ width: '34px', height: '34px', fill: 'white' }}
+    >
+        <path d="M12.004 2c-5.51 0-9.993 4.483-9.993 9.993 0 1.763.457 3.49 1.329 5.024L2 22l5.13-1.346a9.946 9.946 0 004.874 1.275h.005c5.51 0 9.993-4.483 9.993-9.995S17.514 2 12.004 2zm5.25 13.984c-.21.593-1.21 1.134-1.673 1.2-.42.06-1.048.063-2.911-.703-2.383-.98-3.923-3.4-4.043-3.56-.118-.16-.97-1.288-.97-2.454 0-1.166.612-1.74.832-1.97.218-.23.48-.288.64-.288.16 0 .32.002.46.008.146.006.342-.056.536.41.2.484.686 1.674.746 1.793.06.12.06.26 0 .38-.06.12-.12.2-.24.337l-.362.423c-.12.14-.246.29-.105.534.14.244.624 1.03 1.335 1.662.915.815 1.684 1.067 1.928 1.188.244.12.385.102.527-.06.14-.162.61-.712.773-.956.164-.244.327-.204.55-.122.223.082 1.41.664 1.652.784.242.12.403.18.463.284.06.103.06.602-.15 1.196z"/>
+    </svg>
+</a>
 
-    </footer>
-  );
+        </footer>
+    );
 }
