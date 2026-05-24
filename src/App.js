@@ -39,11 +39,13 @@ import Contact from './pages/contact';
 function App() {
   return (
     <Routes>
-      <Route path='/' exact element={<Index/>}/>
-      <Route path='/index' exact element={<Index/>}/>
-      <Route path='/index-two' exact element={<IndexTwo/>}/>
+      <Route path='/' exact element={<IndexFour/>}/>
+      <Route path='/index' exact element={<IndexFour/>}/>
+
+      {/*<Route path='/index-two' exact element={<IndexTwo/>}/>
       <Route path='/index-three' exact element={<IndexThree/>}/>
-      <Route path='/index-four' exact element={<IndexFour/>}/>
+      <Route path='/index-four' exact element={<IndexFour/>}/>*/}
+
       <Route path='/aboutus' exact element={<AboutUs/>}/>
       <Route path='/hosting-shared' exact element={<HostingShared/>}/>
       <Route path='/hosting-vps' exact element={<HostingVps/>}/>

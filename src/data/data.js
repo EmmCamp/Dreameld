@@ -411,37 +411,37 @@ export const serviceData2 = [
     },
     {
         icon:TbCloudHeart,
-        title:'Domains',
+        title:'Dominios',
         desc:'The phrasal sequence of the is now so that many campaign and benefit'
     },
     {
         icon:MdOutlineMarkEmailRead,
-        title:'Emails',
+        title:'Correo Eléctronico',
         desc:'The phrasal sequence of the is now so that many campaign and benefit'
     },
     {
         icon:LuUsers,
-        title:'Supported',
+        title:'Soporte dedicado',
         desc:'The phrasal sequence of the is now so that many campaign and benefit'
     },
     {
         icon:BiTachometer,
-        title:'Speedy',
+        title:'Alto Rendimiento',
         desc:'The phrasal sequence of the is now so that many campaign and benefit'
     },
     {
         icon:BiDisc,
-        title:'Reliable',
+        title:'Confiable',
         desc:'The phrasal sequence of the is now so that many campaign and benefit'
     },
     {
         icon: LiaWeightSolid,
-        title:'Scalable',
+        title:'Escalable',
         desc:'The phrasal sequence of the is now so that many campaign and benefit'
     },
     {
         icon:LiaFileInvoiceDollarSolid,
-        title:'Easy Upgrade',
+        title:'Facil Actualizacion',
         desc:'The phrasal sequence of the is now so that many campaign and benefit'
     },
 ]

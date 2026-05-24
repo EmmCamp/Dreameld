@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {FiKey, FiPhoneOutgoing, FiMail,FiHelpCircle} from '../assets/icons/vander'
 export default function Tagline(){
-    return(
+
+    {/*return(
         <>
         <div className="tagline bg-gradient-to-tr from-sky-500 to-blue-700">
             <div className="container relative">                
@@ -22,5 +23,5 @@ export default function Tagline(){
             </div>
         </div>
         </>
-    )
+    )*/}
 }

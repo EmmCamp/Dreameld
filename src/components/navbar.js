@@ -140,7 +140,7 @@ export default function Navbar({ navClass, ulClass, navLight }) {
                         </Link>
                     </div>
                 </div>
-
+                {/* Menu de Idioma / pais
                 <ul className="buy-button list-none mb-0">
                     <li className="dropdown inline-block relative">
                         <button onClick={() => setSearch(!search)} className="dropdown-toggle h-8 w-8 inline-flex items-center text-center justify-center text-base bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-full align-middle transition-all duration-500" type="button">
@@ -153,7 +153,7 @@ export default function Navbar({ navClass, ulClass, navLight }) {
                             </div>
                         </div>
                     </li>
-
+                    
                     <li className="dropdown inline-block relative ps-1">
                         <button onClick={() => setCountry(!country)} className="dropdown-toggle h-8 w-8 inline-flex items-center text-center justify-center text-base bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-full align-middle transition-all duration-500" type="button">
                             <img src={usaflag} alt="" />
@@ -212,11 +212,11 @@ export default function Navbar({ navClass, ulClass, navLight }) {
                             </ul>
                         </div>
                     </li>
-                </ul>
+                </ul>*/}
 
                 <div id="navigation" className={`${isOpen === true ? 'hidden' : 'block'}`}>
                     <ul className={`${navClass ? `${ulClass}` : ' navigation-menu justify-end '}  `}>
-                        <li className={`${["index", "index-two", "index-three", "index-four"].includes(manu) ? "active" : ""} has-submenu parent-menu-item`}>
+                       {/*<li className={`${["index", "index-two", "index-three", "index-four"].includes(manu) ? "active" : ""} has-submenu parent-menu-item`}>
                             <Link to="/index">Home</Link><span className="menu-arrow"></span>
                             <ul className="submenu">
                                 <li className={manu === "index" ? "active" : ""}><Link to="/index" className="sub-menu-item">Hero One</Link></li>
@@ -224,9 +224,9 @@ export default function Navbar({ navClass, ulClass, navLight }) {
                                 <li className={manu === "index-three" ? "active" : ""}><Link to="/index-three" className="sub-menu-item">Hero Three</Link></li>
                                 <li className={manu === "index-four" ? "active" : ""}><Link to="/index-four" className="sub-menu-item">Hero Four</Link></li>
                             </ul>
-                        </li>
-
-                        <li className={manu === "aboutus" ? "active" : ""}><Link to="/aboutus" className="sub-menu-item">About Us</Link></li>
+                        </li>*/}
+                        <li className={manu === "Inicio" ? "active" : ""}><Link to="/index" className="sub-menu-item">Inicio</Link></li>
+                        <li className={manu === "aboutus" ? "active" : ""}><Link to="/aboutus" className="sub-menu-item">Nosotros</Link></li>
 
                         <li className={`${["hosting-shared", "hosting-vps", "hosting-dedicated", "hosting-cloud", "hosting-domain", "hosting-reseller"].includes(manu) ? "active" : ""} has-submenu parent-menu-item`}><Link to="#"> Hosting </Link><span className="menu-arrow"></span>
                             <ul className="submenu">
@@ -238,7 +238,7 @@ export default function Navbar({ navClass, ulClass, navLight }) {
                                 <li className={manu === "hosting-reseller" ? "active" : ""}><Link to="/hosting-reseller" className="sub-menu-item">Reseller Hosting</Link></li>
                             </ul>
                         </li>
-
+                        {/*
                         <li className={`${["domain-detail", "cart", "checkouts", "my-account"].includes(manu) ? "active" : ""} has-submenu parent-menu-item`}><Link to="#"> Domain </Link><span className="menu-arrow"></span>
                             <ul className="submenu">
                                 <li className={manu === "domain-detail" ? "active" : ""}><Link to="/domain-detail" className="sub-menu-item">Domain Detail</Link></li>
@@ -247,7 +247,7 @@ export default function Navbar({ navClass, ulClass, navLight }) {
                                 <li className={manu === "my-account" ? "active" : ""}><Link to="/my-account" className="sub-menu-item">Account</Link></li>
                             </ul>
                         </li>
-
+                        */}
                         <li className={`${["helpcenter-overview", "helpcenter-faqs", "helpcenter-guides", "helpcenter-support", "blogs", "blog-detail", "login", "signup", "reset-password", "lock-screen", "terms", "privacy", "comingsoon", "maintenance", "error", "thankyou"].includes(manu) ? "active" : ""} has-submenu parent-menu-item`}>
                             <Link to="#">Pages</Link><span className="menu-arrow"></span>
                             <ul className="submenu">
