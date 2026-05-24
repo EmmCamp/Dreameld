@@ -313,17 +313,17 @@ export const serviceData = [
     },
     {
         icon:TbCloudHeart,
-        title:'Domains',
+        title:'Dominios',
         desc:'The phrasal sequence of the is now so that many campaign and benefit'
     },
     {
         icon:MdOutlineMarkEmailRead,
-        title:'Emails',
+        title:'Correo eléctronico',
         desc:'The phrasal sequence of the is now so that many campaign and benefit'
     },
     {
         icon:LuUsers,
-        title:'Supported',
+        title:'Soporte técnico',
         desc:'The phrasal sequence of the is now so that many campaign and benefit'
     },
    
@@ -556,27 +556,27 @@ export  const FeatureData2 = [
     },
     {
         icon:TbCloudHeart,
-        title:'Domains',
+        title:'Dominios',
         desc:'The phrasal sequence of the is now so that many campaign and benefit'
     },
     {
         icon:MdOutlineMarkEmailRead,
-        title:'Emails',
+        title:'Correo eléctronico',
         desc:'The phrasal sequence of the is now so that many campaign and benefit'
     },
     {
         icon:LuUsers,
-        title:'Supported',
+        title:'Soporte técnico',
         desc:'The phrasal sequence of the is now so that many campaign and benefit'
     },
     {
         icon:BiTachometer,
-        title:'Speedy',
+        title:'Alto rendimiento',
         desc:'The phrasal sequence of the is now so that many campaign and benefit'
     },
     {
         icon:BiDisc,
-        title:'Reliable',
+        title:'Confiable',
         desc:'The phrasal sequence of the is now so that many campaign and benefit'
     },
    
