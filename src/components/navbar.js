@@ -227,7 +227,8 @@ export default function Navbar({ navClass, ulClass, navLight }) {
                         </li>*/}
                         <li className={manu === "Inicio" ? "active" : ""}><Link to="/index" className="sub-menu-item">Inicio</Link></li>
                         <li className={manu === "aboutus" ? "active" : ""}><Link to="/aboutus" className="sub-menu-item">Nosotros</Link></li>
-
+                        <li className={manu === "hosting-shared" ? "active" : ""}><Link to="/hosting-shared" className="sub-menu-item">Web Hosting</Link></li>
+                        {/*
                         <li className={`${["hosting-shared", "hosting-vps", "hosting-dedicated", "hosting-cloud", "hosting-domain", "hosting-reseller"].includes(manu) ? "active" : ""} has-submenu parent-menu-item`}><Link to="#"> Hosting </Link><span className="menu-arrow"></span>
                             <ul className="submenu">
                                 <li className={manu === "hosting-shared" ? "active" : ""}><Link to="/hosting-shared" className="sub-menu-item">Shared Hosting</Link></li>
@@ -237,7 +238,9 @@ export default function Navbar({ navClass, ulClass, navLight }) {
                                 <li className={manu === "hosting-domain" ? "active" : ""}><Link to="/hosting-domain" className="sub-menu-item">Domain Name</Link></li>
                                 <li className={manu === "hosting-reseller" ? "active" : ""}><Link to="/hosting-reseller" className="sub-menu-item">Reseller Hosting</Link></li>
                             </ul>
+                            
                         </li>
+                        */}
                         {/*
                         <li className={`${["domain-detail", "cart", "checkouts", "my-account"].includes(manu) ? "active" : ""} has-submenu parent-menu-item`}><Link to="#"> Domain </Link><span className="menu-arrow"></span>
                             <ul className="submenu">
