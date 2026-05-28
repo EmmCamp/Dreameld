@@ -9,7 +9,7 @@ import Newsletter from "../components/newslatter";
 import Footer from "../components/footer";
 import Switcher from "../components/switcher";
 
-import { serviceData, teamData } from "../data/data";
+import { serviceData, pilaresData, teamData } from "../data/data";
 import { AiOutlineCheckCircle, MdMailOutline, FiHexagon, FiFacebook, FiInstagram, FiLinkedin, AiOutlineQuestionCircle } from '../assets/icons/vander'
 
 export default function AboutUs() {
@@ -152,108 +152,123 @@ export default function AboutUs() {
                 </div>
 
                 <div className="container relative md:mt-24 mt-16">
-                    <div className="grid grid-cols-1 pb-8 text-center">
-                        <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium">Why choose Shared Hosting ?</h3>
-                        <p className="text-slate-400 max-w-xl mx-auto">Create, collaborate, and turn your ideas into incredible products with the definitive platform for digital design.</p>
+    {/* 1. TÍTULO Y SUBTÍTULO MODIFICADOS */}
+    <div className="grid grid-cols-1 pb-8 text-center">
+        <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium text-slate-900 dark:text-white">
+            Nuestros Pilares Tecnológicos
+        </h3>
+        <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base">
+            La infraestructura de alto rendimiento es solo el inicio. Nos mueven los valores de la ingeniería transparente y el soporte humano real.
+        </p>
+    </div>
+
+    {/* GRIDS DE LAS TARJETAS */}
+    <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
+        {pilaresData.map((item, index) => {
+            let Icon = item.icon
+            return (
+                <div 
+                    className="group relative p-6 shadow-md dark:shadow-gray-800 hover:shadow-xl hover:bg-[#7c3aed] transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-slate-900 overflow-hidden border border-gray-100 dark:border-gray-800" 
+                    key={index}
+                >
+                    {/* Contenedor del Icono Hexagonal */}
+                    <div className="relative overflow-hidden text-transparent -m-3 mb-2">
+                        <FiHexagon className="h-24 w-24 fill-[#7c3aed]/[0.08] group-hover:fill-white/20 transition-all duration-500" />
+                        <div className="absolute top-2/4 -translate-y-2/4 start-8 text-[#7c3aed] group-hover:text-white transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center">
+                            <Icon />
+                        </div>
                     </div>
 
-                    <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
-                        {serviceData.map((item, index) => {
-                            let Icon = item.icon
-                            return (
-                                <div className="group relative p-6 shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 hover:bg-sky-500 dark:hover:bg-sky-500 transition-all duration-500 ease-in-out rounded-md bg-white dark:bg-slate-900 overflow-hidden" key={index}>
-                                    <div className="relative overflow-hidden text-transparent -m-3">
-                                        <FiHexagon className="h-24 w-24 fill-sky-500/[0.07] group-hover:fill-white/20" />
-                                        <div className="absolute top-2/4 -translate-y-2/4 start-8 text-sky-500 rounded-md group-hover:text-white transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center">
-                                            <Icon />
-                                        </div>
-                                    </div>
+                    {/* Textos de la tarjeta (Títulos y descripciones) */}
+                    <div className="mt-6 relative z-10">
+                        <h5 className="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-white transition-all duration-500 ease-in-out">
+                            {item.title}
+                        </h5>
+                        <p className="text-slate-400 group-hover:text-white/80 transition-all duration-500 ease-in-out mt-3 text-sm leading-relaxed">
+                            {item.desc}
+                        </p>
+                    </div>
+                </div>
+            )
+        })}
+    </div>
+</div>
+            <WorldMap />
 
-                                    <div className="mt-6">
-                                        <h5><Link to="#" className="text-lg font-medium group-hover:text-white transition-all duration-500 ease-in-out">{item.title}</Link></h5>
-                                        <p className="text-slate-400 group-hover:text-white/50 transition-all duration-500 ease-in-out mt-3">{item.desc}</p>
-                                    </div>
+            {/* SECCIÓN TEAM MEMBERS */}
+            <div className="container relative md:mt-24 mt-16">
+                <div className="grid grid-cols-1 pb-8 text-center">
+                    <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium">Our Team Members</h3>
+                    <p className="text-slate-400 max-w-xl mx-auto">Create, collaborate, and turn your ideas into incredible products with the definitive platform for digital design.</p>
+                </div>
+
+                <div className="grid md:grid-cols-4 grid-cols-2 mt-8 gap-[30px]">
+                    {teamData.map((item, index) => {
+                        return (
+                            <div className="group text-center" key={index}>
+                                <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
+                                    <img src={item.image} className="" alt="" />
+                                    <ul className="list-none absolute top-1/2 -translate-y-1/2 -end-20 group-hover:end-5 transition-all duration-500 ease-in-out">
+                                        <li className=""><Link to="" className="h-8 w-8 inline-flex items-center text-center justify-center text-base bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-full align-middle transition-all duration-500"><FiFacebook className="h-4 w-4" /></Link></li>
+                                        <li className="mt-1"><Link to="" className="h-8 w-8 inline-flex items-center text-center justify-center text-base bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-full align-middle transition-all duration-500"><FiInstagram className="h-4 w-4" /></Link></li>
+                                        <li className="mt-1"><Link to="" className="h-8 w-8 inline-flex items-center text-center justify-center text-base bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-full align-middle transition-all duration-500"><FiLinkedin className="h-4 w-4" /></Link></li>
+                                    </ul>
                                 </div>
-                            )
-                        })}
-                    </div>
-                </div>
-                <WorldMap />
-
-                <div className="container relative md:mt-24 mt-16">
-                    <div className="grid grid-cols-1 pb-8 text-center">
-                        <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium">Our Team Members</h3>
-
-                        <p className="text-slate-400 max-w-xl mx-auto">Create, collaborate, and turn your ideas into incredible products with the definitive platform for digital design.</p>
-                    </div>
-
-                    <div className="grid md:grid-cols-4 grid-cols-2 mt-8 gap-[30px]">
-                        {teamData.map((item, index) => {
-                            return (
-                                <div className="group text-center" key={index}>
-                                    <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
-                                        <img src={item.image} className="" alt="" />
-
-                                        <ul className="list-none absolute top-1/2 -translate-y-1/2 -end-20 group-hover:end-5 transition-all duration-500 ease-in-out">
-                                            <li className=""><Link to="" className="h-8 w-8 inline-flex items-center text-center justify-center text-base bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-full align-middle transition-all duration-500"><FiFacebook className="h-4 w-4" /></Link></li>
-                                            <li className="mt-1"><Link to="" className="h-8 w-8 inline-flex items-center text-center justify-center text-base bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-full align-middle transition-all duration-500"><FiInstagram className="h-4 w-4" /></Link></li>
-                                            <li className="mt-1"><Link to="" className="h-8 w-8 inline-flex items-center text-center justify-center text-base bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-full align-middle transition-all duration-500"><FiLinkedin className="h-4 w-4" /></Link></li>
-                                        </ul>
-                                    </div>
-
-                                    <div className="content mt-3">
-                                        <Link to="" className="text-lg hover:text-sky-500 transition-all duration-500 ease-in-out h5 font-medium">{item.name}</Link>
-                                        <p className="text-slate-400">{item.title}</p>
-                                    </div>
+                                <div className="content mt-3">
+                                    <Link to="" className="text-lg hover:text-sky-500 transition-all duration-500 ease-in-out h5 font-medium">{item.name}</Link>
+                                    <p className="text-slate-400">{item.title}</p>
                                 </div>
-                            )
-                        })}
-                    </div>
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
+
+            {/* SECCIÓN PREGUNTAS FRECUENTES */}
+            <div className="container relative md:mt-24 mt-16">
+                <div className="grid grid-cols-1 pb-8 text-center">
+                    <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium">Questions & Answers</h3>
+                    <p className="text-slate-400 max-w-xl mx-auto">Create, collaborate, and turn your ideas into incredible products with the definitive platform for digital design.</p>
                 </div>
 
-                <div className="container md:mt-24 mt-16">
-                    <div className="grid grid-cols-1 pb-8 text-center">
-                        <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium">Questions & Answers</h3>
-
-                        <p className="text-slate-400 max-w-xl mx-auto">Create, collaborate, and turn your ideas into incredible products with the definitive platform for digital design.</p>
+                <div className="grid md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
+                    <div className="flex">
+                        <AiOutlineQuestionCircle className="h-8 text-sky-500 me-3 w-6" />
+                        <div className="flex-1">
+                            <h5 className="mb-2 text-lg font-medium">How our <span className="text-sky-500">Hoxia</span> work ?</h5>
+                            <p className="text-slate-400">Due to its widespread use as filler text for layouts, non-readability is of great importance: human perception is tuned to recognize certain patterns and repetitions in texts.</p>
+                        </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
-                        <div className="flex">
-                            <AiOutlineQuestionCircle className="h-8 text-sky-500 me-3 w-6" />
-                            <div className="flex-1">
-                                <h5 className="mb-2 text-lg font-medium">How our <span className="text-sky-500">Hoxia</span> work ?</h5>
-                                <p className="text-slate-400">Due to its widespread use as filler text for layouts, non-readability is of great importance: human perception is tuned to recognize certain patterns and repetitions in texts.</p>
-                            </div>
+                    <div className="flex">
+                        <AiOutlineQuestionCircle className="h-8 text-sky-500 me-3 w-6 " />
+                        <div className="flex-1">
+                            <h5 className="mb-2 text-lg font-medium"> What is the main process open account ?</h5>
+                            <p className="text-slate-400">If the distribution of letters and 'words' is random, the reader will not be distracted from making a neutral judgement on the visual impact</p>
                         </div>
+                    </div>
 
-                        <div className="flex">
-                            <AiOutlineQuestionCircle className="h-8 text-sky-500 me-3 w-6 " />
-                            <div className="flex-1">
-                                <h5 className="mb-2 text-lg font-medium"> What is the main process open account ?</h5>
-                                <p className="text-slate-400">If the distribution of letters and 'words' is random, the reader will not be distracted from making a neutral judgement on the visual impact</p>
-                            </div>
+                    <div className="flex">
+                        <AiOutlineQuestionCircle className="h-8 text-sky-500 me-3 w-6" />
+                        <div className="flex-1">
+                            <h5 className="mb-2 text-lg font-medium"> How to make unlimited data entry ?</h5>
+                            <p className="text-slate-400">Furthermore, it is advantageous when the dummy text is relatively realistic so that the layout impression of the final publication is not compromised.</p>
                         </div>
+                    </div>
 
-                        <div className="flex">
-                            <AiOutlineQuestionCircle className="h-8 text-sky-500 me-3 w-6" />
-                            <div className="flex-1">
-                                <h5 className="mb-2 text-lg font-medium"> How to make unlimited data entry ?</h5>
-                                <p className="text-slate-400">Furthermore, it is advantageous when the dummy text is relatively realistic so that the layout impression of the final publication is not compromised.</p>
-                            </div>
-                        </div>
-
-                        <div className="flex">
-                            <AiOutlineQuestionCircle className="h-8 text-sky-500 me-3 w-6" />
-                            <div className="flex-1">
-                                <h5 className="mb-2 text-lg font-medium"> Is <span className="text-sky-500">Hoxia</span> safer to use with my account ?</h5>
-                                <p className="text-slate-400">The most well-known dummy text is the 'Lorem Ipsum', which is said to have originated in the 16th century. Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to 'proper' Latin.</p>
-                            </div>
+                    <div className="flex">
+                        <AiOutlineQuestionCircle className="h-8 text-sky-500 me-3 w-6" />
+                        <div className="flex-1">
+                            <h5 className="mb-2 text-lg font-medium"> Is <span className="text-sky-500">Hoxia</span> safer to use with my account ?</h5>
+                            <p className="text-slate-400">The most well-known dummy text is the 'Lorem Ipsum', which is said to have originated in the 16th century. Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to 'proper' Latin.</p>
                         </div>
                     </div>
                 </div>
-                <Newsletter />
-            </section>
+            </div>
+            
+            <Newsletter />
+        </section>
+        
             <Footer />
             <Switcher />
         </>
