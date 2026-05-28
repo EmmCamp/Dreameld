@@ -298,7 +298,7 @@ export default function Navbar({ navClass, ulClass, navLight }) {
                             </ul>
                         </li>
 
-                        <li><Link to="/contact" className="sub-menu-item">Contact</Link></li>
+                        <li><Link to="/contact" className="sub-menu-item">Contacto</Link></li>
                     </ul>
                 </div>
             </div>

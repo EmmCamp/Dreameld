@@ -19,11 +19,35 @@ export default function AboutUs(){
         <Navbar navClass= "defaultscroll is-sticky" ulClass='navigation-menu justify-end nav-light' navLight={true}/>
 
         <section className="relative table w-full py-36 bg-[url('../../assets/images/bg/bg6.jpg')] bg-center bg-no-repeat bg-cover">
-            <div className="absolute inset-0 bg-sky-900/80"></div>
+             <div className="absolute inset-0 bg-sky-900/80"></div> 
             <div className="container relative">
                 <div className="grid grid-cols-1 text-center mt-10">
-                    <h3 className="md:text-3xl text-2xl md:leading-snug tracking-wide leading-snug font-medium text-white">About Us</h3>
+                    <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
+    
+    {/* TÍTULO: Grande, blanco y dominante */}
+    <h1 style={{ 
+        color: '#ffffff', 
+        fontSize: '2.5rem', 
+        fontWeight: '700', 
+        marginBottom: '16px',
+        lineHeight: '1.2' 
+    }}>
+        Transformando ideas en experiencias digitales. Esto es Dreameld.
+    </h1>
 
+    {/* SUBTÍTULO: Más chico, gris claro y estilizado */}
+    <p style={{ 
+        color: '#b3b3b3', // Un gris claro elegante que contrasta con el fondo morado
+        fontSize: '1.15rem', 
+        fontWeight: '400', 
+        lineHeight: '1.6',
+        maxWidth: '700px',
+        margin: '0 auto'
+    }}>
+        En Dreameld no te atienden robots. Somos un equipo apasionado de ingenieros dedicados a mantener tus proyectos en línea funcionando al 100%, 24/7.
+    </p>
+
+</div>
                 </div>
             </div>
             
