@@ -18,8 +18,8 @@ export default function AboutUs(){
         <>
         <Navbar navClass= "defaultscroll is-sticky" ulClass='navigation-menu justify-end nav-light' navLight={true}/>
 
-        <section className="relative table w-full py-36 bg-[url('../../assets/images/bg/bg6.jpg')] bg-center bg-no-repeat bg-cover">
-             <div className="absolute inset-0 bg-sky-900/80"></div> 
+        <section className="relative table w-full py-36 bg-[url('../../assets/images/bg/bg9.jpg')] bg-center bg-no-repeat bg-cover">
+            <div className="absolute inset-0 bg-sky-900/80"></div>
             <div className="container relative">
                 <div className="grid grid-cols-1 text-center mt-10">
                     <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
