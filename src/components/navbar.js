@@ -100,7 +100,7 @@ export default function Navbar({ navClass, ulClass, navLight }) {
         className="hidden dark:inline-block"
         alt="Dreameld Night" 
         style={{ 
-            height: '85px', 
+            height: '40px', 
             width: 'auto', 
             maxHeight: 'none', 
             maxWidth: '220px',
