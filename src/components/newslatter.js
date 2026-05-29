@@ -4,6 +4,7 @@ import {MdMailOutline, BsPencil} from '../assets/icons/vander'
 export default function Newsletter(){
     return(
             <div className="container relative md:mt-24 mt-16">
+            {/*
                 <div className="relative bg-white dark:bg-slate-900 lg:px-8 px-6 py-10 rounded-xl shadow dark:shadow-gray-800 overflow-hidden">
                     <div className="grid md:grid-cols-2 grid-cols-1 items-center gap-[30px]">
                         <div className="md:text-start text-center z-1">
@@ -27,6 +28,8 @@ export default function Newsletter(){
                         <BsPencil className="lg:text-[150px] text-7xl text-slate-900/5 dark:text-white/5"/>
                     </div>
                 </div>
+                */}
             </div> 
+            
     )
 }

@@ -9,7 +9,7 @@ export default function HostingServices({title,bgIcon}){
         <div className="container relative md:mt-24 mt-16">
             <div className="grid grid-cols-1 pb-8 text-center">
                 <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium">{title}</h3>
-                <p className="text-slate-400 max-w-xl mx-auto">Crea, colabora y transforma tus ideas en productos increíbles con la plataforma definitiva para el diseño digital.</p>
+                <p className="text-slate-400 max-w-xl mx-auto">Impulsa tus proyectos digitales con infraestructura Seguridad, escalable y diseñada para startups, emprendedores y negocios en crecimiento.</p>
             </div>
 
             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">

@@ -39,7 +39,7 @@ export default function Footer(){
             <div className="py-[30px] px-0 border-t border-slate-800">
                 <div className="container relative text-center">
                     <div className="grid md:grid-cols-1">
-                        <p className="mb-0">© {new Date().getFullYear()} Hoxia. Design & Develop with <i className="mdi mdi-heart text-red-600"></i> by <Link to="https://shreethemes.in/" target="_blank" className="text-reset">Shreethemes</Link>.</p>
+                        <p className="mb-0">© {new Date().getFullYear()} Dreameld. Design & Develop with <i className="mdi mdi-heart text-red-600"></i> by <Link to="https://shreethemes.in/" target="_blank" className="text-reset">Shreethemes</Link>.</p>
                     </div>
                 </div>
             </div>

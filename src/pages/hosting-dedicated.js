@@ -29,7 +29,7 @@ export default function HostingDedicated(){
                     <p className="text-slate-400 text-[17px] max-w-xl mx-auto">Create, collaborate, and turn your ideas into incredible products with the definitive platform for digital design.</p>
 
                     <ul className="tracking-[0.5px] mt-6 inline-block">
-                        <li className="inline-block uppercase text-[13px] font-semibold duration-500 ease-in-out hover:text-sky-500"><Link to="/index">Hoxia</Link></li>
+                        <li className="inline-block uppercase text-[13px] font-semibold duration-500 ease-in-out hover:text-sky-500"><Link to="/index">Dreameld</Link></li>
                         <li className="inline-block ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
                         <li className="inline-block uppercase text-[13px] font-semibold text-sky-500" aria-current="page">Dedicated Hosting</li>
                     </ul>

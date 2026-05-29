@@ -68,7 +68,7 @@ export default function Index(){
 
         <section className="relative md:pb-24 pb-16 -mt-[74px]">
             <DomainList/>
-            <HostingServices title="Hosting Services"/>
+            <HostingServices title="Servicios de Hosting Web"/>
             <ServerOne/>
             <PricingOne/>
             <ServerTwo/>

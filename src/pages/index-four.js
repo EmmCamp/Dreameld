@@ -65,7 +65,7 @@ export default function IndexFour(){
         <section className="relative md:pb-24 pb-16 -mt-[74px]">
             <DomainList/>
             <PricingTwo priceClass="container relative md:mt-24 mt-16"/>
-            <HostingServices title="Hosting Services"/>
+            <HostingServices title="Servicios de web hosting"/>
             <ServerOne/>
             <ServerTwo/>
             <Faq/>

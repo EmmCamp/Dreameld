@@ -7,8 +7,8 @@ export default function PricingTwo({title,priceClass}){
         <div className={priceClass}>
             {title === false ? "" : 
                 <div className="grid grid-cols-1 pb-16 text-center">
-                    <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium">Consulta nuestros precios de Hosting CPanel</h3>
-                    <p className="text-slate-400 max-w-xl mx-auto">ea, colabora y transforma tus ideas en productos increíbles con la plataforma definitiva para el diseño digital.</p>
+                    <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium">Hosting profesional para impulsar tu negocio</h3>
+                    <p className="text-slate-400 max-w-xl mx-auto">Implementa, administra y escala tus proyectos digitales con una plataforma segura, rápida y diseñada para crecer contigo.</p>
                 </div>
             }
 
@@ -51,13 +51,14 @@ export default function PricingTwo({title,priceClass}){
                                         </div>
                 
                                         <ul className="list-none text-slate-400">
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">10GB Ram</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">100GB Bandwith</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">100GB SSD Storage</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">3 Domain Hosted Support</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">50 Email Account</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">5 Database</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Unlimited Traffic</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">1 Sitio web</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">5 GB Almacenamiento</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-green-600 text-[20px] align-middle me-2"/> <span className="">Subdominios ilimitados</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Seguridad incluida</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Acceso a cPanel</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">Cuentas FTP</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Soporte vía chat</span></li>
+                                               <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Base de datos MySQL</span></li>
                                         </ul>
                                         <Link to="" className="inline-block px-8 py-2.5 text-[16px] font-medium tracking-wide bg-transparent hover:bg-sky-500 border border-gray-100 dark:border-gray-800 hover:border-sky-500 dark:hover:border-sky-500 text-slate-900 dark:text-white hover:text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-md text-center align-middle transition-all duration-500 w-full mt-5">Contactanos</Link>
                                     </div>
@@ -72,13 +73,15 @@ export default function PricingTwo({title,priceClass}){
                                         </div>
                 
                                         <ul className="list-none text-slate-400">
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">10GB Ram</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">100GB Bandwith</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">100GB SSD Storage</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">3 Domain Hosted Support</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">50 Email Account</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">5 Database</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Unlimited Traffic</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">Hasta 5 sitios web</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">20 GB Almacenamiento</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-green-600 text-[20px] align-middle me-2"/> <span className="">Correos profesionales ilimitados</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Subdominios ilimitados</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Certificado SSL</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">Cuentas FTP</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Soporte vía chat</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">WordPress listo para personalizar</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Base de datos MySQL</span></li>
                                         </ul>
                                         <Link to="" className="inline-block px-8 py-2.5 text-[16px] font-medium tracking-wide bg-transparent hover:bg-sky-500 border border-gray-100 dark:border-gray-800 hover:border-sky-500 dark:hover:border-sky-500 text-slate-900 dark:text-white hover:text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-md text-center align-middle transition-all duration-500 w-full mt-5">Contactanos</Link>
                                     </div>
@@ -95,18 +98,21 @@ export default function PricingTwo({title,priceClass}){
                                             </div>
                 
                                             <ul className="list-none text-slate-400">
-                                                <li className="mb-1 flex"><AiOutlineCheckCircle className=" w-10 text-sky-500 text-[20px] align-middle me-2"/> <span className="">We offers a free 14 days of service for new customers.</span></li>
-                                                <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">100GB Ram</span></li>
-                                                <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">1000GB Bandwith</span></li>
-                                                <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">1000GB SSD Storage</span></li>
-                                                <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">15 Domain Hosted Support</span></li>
-                                                <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">100 Email Account</span></li>
-                                                <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">10 Database</span></li>
-                                                <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">Unlimited Traffic</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">Sitios web ilimitados</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">50 GB Almacenamiento</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-green-600 text-[20px] align-middle me-2"/> <span className="">Correos profesionales ilimitados</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Subdominios ilimitados</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Acceso a cPanel</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Certificado SSL</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">Cuentas FTP</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Wordpress Management</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">SiteJet Builder</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Soporte vía chat (prioritario)</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Base de datos MySQL</span></li>
                                             </ul>
                                             <Link to="" className="inline-block px-8 py-2.5 text-[16px] font-medium tracking-wide bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-md text-center align-middle transition-all duration-500 w-full mt-5">Contactanos</Link>
                 
-                                            <p className="text-sm text-slate-400 mt-1.5"><span className="text-red-600">*</span>T&C Apply</p>
+                                            <p className="text-sm text-slate-400 mt-1.5"><span className="text-red-600">*</span>Consulta restricciones</p>
                                         </div>
                                     </div>
                 
@@ -153,13 +159,14 @@ export default function PricingTwo({title,priceClass}){
                                         </div>
                 
                                         <ul className="list-none text-slate-400">
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">10GB Ram</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">100GB Bandwith</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">100GB SSD Storage</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">3 Domain Hosted Support</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">50 Email Account</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">5 Database</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Unlimited Traffic</span></li>
+                                             <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">1 Sitio web</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">5 GB Almacenamiento</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-green-600 text-[20px] align-middle me-2"/> <span className="">Subdominios ilimitados</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Seguridad incluida</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Acceso a cPanel</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">Cuentas FTP</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Soporte vía chat</span></li>
+                                               <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Base de datos MySQL</span></li>
                                         </ul>
                                         <Link to="" className="inline-block px-8 py-2.5 text-[16px] font-medium tracking-wide bg-transparent hover:bg-sky-500 border border-gray-100 dark:border-gray-800 hover:border-sky-500 dark:hover:border-sky-500 text-slate-900 dark:text-white hover:text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-md text-center align-middle transition-all duration-500 w-full mt-5">Contactanos</Link>
                                     </div>
@@ -174,13 +181,15 @@ export default function PricingTwo({title,priceClass}){
                                         </div>
                 
                                         <ul className="list-none text-slate-400">
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">10GB Ram</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">100GB Bandwith</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">100GB SSD Storage</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">3 Domain Hosted Support</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">50 Email Account</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">5 Database</span></li>
-                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Unlimited Traffic</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">Hasta 5 sitios web</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">20 GB Almacenamiento</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-green-600 text-[20px] align-middle me-2"/> <span className="">Correos profesionales ilimitados</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Subdominios ilimitados</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Certificado SSL</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">Cuentas FTP</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Soporte vía chat</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">WordPress listo para personalizar</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Base de datos MySQL</span></li>
                                         </ul>
                                         <Link to="" className="inline-block px-8 py-2.5 text-[16px] font-medium tracking-wide bg-transparent hover:bg-sky-500 border border-gray-100 dark:border-gray-800 hover:border-sky-500 dark:hover:border-sky-500 text-slate-900 dark:text-white hover:text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-md text-center align-middle transition-all duration-500 w-full mt-5">Contactanos</Link>
                                     </div>
@@ -196,19 +205,22 @@ export default function PricingTwo({title,priceClass}){
                                                 <span className="text-lg font-medium self-end mb-1">MXN /Anual</span>
                                             </div>
                 
-                                            <ul className="list-none text-slate-400">
-                                                <li className="mb-1 flex"><AiOutlineCheckCircle className=" w-10 text-sky-500 text-[20px] align-middle me-2"/> <span className="">We offers a free 14 days of service for new customers.</span></li>
-                                                <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">100GB Ram</span></li>
-                                                <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">1000GB Bandwith</span></li>
-                                                <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">1000GB SSD Storage</span></li>
-                                                <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">15 Domain Hosted Support</span></li>
-                                                <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">100 Email Account</span></li>
-                                                <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">10 Database</span></li>
-                                                <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">Unlimited Traffic</span></li>
+                                             <ul className="list-none text-slate-400">
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">Sitios web ilimitados</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">50 GB Almacenamiento</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-green-600 text-[20px] align-middle me-2"/> <span className="">Correos profesionales ilimitados</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Subdominios ilimitados</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Acceso a cPanel</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Certificado SSL</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className=" text-sky-500 text-[20px] align-middle me-2"/> <span className="">Cuentas FTP</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Wordpress Management</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">SiteJet Builder</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Soporte vía chat (prioritario)</span></li>
+                                            <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Base de datos MySQL</span></li>
                                             </ul>
                                             <Link to="" className="inline-block px-8 py-2.5 text-[16px] font-medium tracking-wide bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-md text-center align-middle transition-all duration-500 w-full mt-5">Contactanos</Link>
                 
-                                            <p className="text-sm text-slate-400 mt-1.5"><span className="text-red-600">*</span>T&C Apply</p>
+                                            <p className="text-sm text-slate-400 mt-1.5"><span className="text-red-600">*</span>Consulta restricciones</p>
                                         </div>
                                     </div>
                 

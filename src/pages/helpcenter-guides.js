@@ -20,7 +20,7 @@ export default function HelpcenterGuides(){
             
             <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
                 <ul className="tracking-[0.5px] mb-0 inline-block">
-                    <li className="inline-block text-[15px] font-medium duration-500 ease-in-out text-white/50 hover:text-white"><Link to="/index">Hoxia</Link></li>
+                    <li className="inline-block text-[15px] font-medium duration-500 ease-in-out text-white/50 hover:text-white"><Link to="/index">Dreameld</Link></li>
                     <li className="inline-block text-[15px] text-white ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
                     <li className="inline-block text-[15px] font-medium duration-500 ease-in-out text-white/50 hover:text-white"><Link to="/helpcenter-overview">Helpcenter</Link></li>
                     <li className="inline-block text-[15px] text-white ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
@@ -64,7 +64,7 @@ export default function HelpcenterGuides(){
                             <li className="mt-2"><Link to="" className="text-slate-400"><i className="mdi mdi-arrow-right text-sky-500 me-2"></i>Updating your listing</Link></li>
                             <li className="mt-2"><Link to="" className="text-slate-400"><i className="mdi mdi-arrow-right text-sky-500 me-2"></i>Neighbourhoods</Link></li>
                             <li className="mt-2"><Link to="" className="text-slate-400"><i className="mdi mdi-arrow-right text-sky-500 me-2"></i>Listing photos & photography</Link></li>
-                            <li className="mt-2"><Link to="" className="text-slate-400"><i className="mdi mdi-arrow-right text-sky-500 me-2"></i>Hoxia Plus</Link></li>
+                            <li className="mt-2"><Link to="" className="text-slate-400"><i className="mdi mdi-arrow-right text-sky-500 me-2"></i>Dreameld Plus</Link></li>
                             <li className="mt-2"><Link to="" className="text-slate-400"><i className="mdi mdi-arrow-right text-sky-500 me-2"></i>API-connected software</Link></li>
                         </ul>
                     </div>
@@ -83,8 +83,8 @@ export default function HelpcenterGuides(){
                     <div className="">
                         <h5 className="font-medium text-xl">Your reservations</h5>
                         <ul className="list-none mt-4">
-                            <li className="mt-2"><Link to="" className="text-slate-400"><i className="mdi mdi-arrow-right text-sky-500 me-2"></i>Hoxia safely</Link></li>
-                            <li className="mt-2"><Link to="" className="text-slate-400"><i className="mdi mdi-arrow-right text-sky-500 me-2"></i>Hoxia Experiences and Adventures</Link></li>
+                            <li className="mt-2"><Link to="" className="text-slate-400"><i className="mdi mdi-arrow-right text-sky-500 me-2"></i>Dreameld safely</Link></li>
+                            <li className="mt-2"><Link to="" className="text-slate-400"><i className="mdi mdi-arrow-right text-sky-500 me-2"></i>Dreameld Experiences and Adventures</Link></li>
                             <li className="mt-2"><Link to="" className="text-slate-400"><i className="mdi mdi-arrow-right text-sky-500 me-2"></i>Changing a reservation</Link></li>
                             <li className="mt-2"><Link to="" className="text-slate-400"><i className="mdi mdi-arrow-right text-sky-500 me-2"></i>Cancelling a reservation</Link></li>
                             <li className="mt-2"><Link to="" className="text-slate-400"><i className="mdi mdi-arrow-right text-sky-500 me-2"></i>Long-term reservations</Link></li>

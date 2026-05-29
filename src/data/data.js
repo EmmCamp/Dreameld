@@ -309,22 +309,22 @@ export const serviceData = [
     {
         icon:VscServer,
         title:'Web Hosting',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        desc:'Infraestructura rápida y segura para alojar y administrar tus proyectos digitales'
     },
     {
         icon:TbCloudHeart,
         title:'Dominios',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        desc:'Registra y administra dominios profesionales para fortalecer tu presencia en línea'
     },
     {
         icon:MdOutlineMarkEmailRead,
         title:'Correo eléctronico',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        desc:'Cuentas de correo empresariales seguras y accesibles desde cualquier lugar'
     },
     {
         icon:LuUsers,
         title:'Soporte técnico',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        desc:'Acompañamiento técnico cercano para ayudarte cuando más lo necesites'
     },
    
 ]
@@ -430,60 +430,60 @@ export const serviceData2 = [
     {
         icon:VscServer,
         title:'Web Hosting',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        desc:'Infraestructura rápida y segura para alojar y administrar tus proyectos digitales'
     },
     {
         icon:TbCloudHeart,
         title:'Dominios',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        desc:'Registra y administra dominios profesionales para fortalecer tu presencia en línea'
     },
     {
         icon:MdOutlineMarkEmailRead,
         title:'Correo Eléctronico',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        desc:'Cuentas de correo empresariales seguras y accesibles desde cualquier lugar'
     },
     {
         icon:LuUsers,
-        title:'Soporte dedicado',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        title:'Soporte especializado',
+        desc:'Acompañamiento técnico cercano para ayudarte cuando más lo necesites'
     },
     {
         icon:BiTachometer,
         title:'Alto Rendimiento',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        desc:'Servidores optimizados para ofrecer velocidad, estabilidad y disponibilidad'
     },
     {
         icon:BiDisc,
-        title:'Confiable',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        title:'Seguridad',
+        desc:'Tecnología estable y segura diseñada para respaldar el crecimiento de tu negocio'
     },
     {
         icon: LiaWeightSolid,
         title:'Escalable',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        desc:'Soluciones flexibles que crecen junto a tus proyectos y necesidades digitales'
     },
     {
         icon:LiaFileInvoiceDollarSolid,
-        title:'Facil Actualizacion',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        title:'Fácil Actualización',
+        desc:'Administra y mejora tus servicios de forma simple, rápida y sin complicaciones'
     },
 ]
 
 export const serverData = [
     {
         icon:LiaSwatchbookSolid,
-        title:'Enhance Security',
-        desc:'There are many variations of passages of Lorem Ipsum available'
+        title:'Seguridad Inteligente',
+        desc:'Tecnología y protección avanzada para garantizar la estabilidad de tus servicios digitales'
     },
     {
         icon:BiTachometer,
-        title:'High Performance',
-        desc:'There are many variations of passages of Lorem Ipsum available'
+        title:'Máximo Rendimiento',
+        desc:'Servidores optimizados para ofrecer una experiencia rápida, estable y escalable'
     },
     {
         icon:FiUserCheck,
-        title:'Unbeatable Support',
-        desc:'There are many variations of passages of Lorem Ipsum available'
+        title:'Soporte Cercano',
+        desc:'Atención técnica especializada enfocada en resolver y acompañar tus proyectos'
     },
 ]
 export const accordionData = [
@@ -494,7 +494,7 @@ export const accordionData = [
     },
     {
         id:2,
-        title:'Do I need a designer to use Hoxia ?',
+        title:'Do I need a designer to use Dreameld ?',
         desc:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form."
     },
     {
@@ -514,7 +514,7 @@ export const accordionData = [
     },
     {
         id:6,
-        title:'Do I need a designer to use Hoxia ?',
+        title:'Do I need a designer to use Dreameld ?',
         desc:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form."
     },
     {
@@ -575,32 +575,32 @@ export  const FeatureData2 = [
     {
         icon:VscServer,
         title:'Web Hosting',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        desc:'Infraestructura rápida y segura para alojar y administrar tus proyectos digitales'
     },
     {
         icon:TbCloudHeart,
         title:'Dominios',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        desc:'Registra y administra dominios profesionales para fortalecer tu presencia en línea'
     },
     {
         icon:MdOutlineMarkEmailRead,
         title:'Correo eléctronico',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        desc:'Cuentas de correo empresariales seguras y accesibles desde cualquier lugar'
     },
     {
         icon:LuUsers,
         title:'Soporte técnico',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        desc:'Acompañamiento técnico cercano para ayudarte cuando más lo necesites'
     },
     {
         icon:BiTachometer,
         title:'Alto rendimiento',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        desc:'Servidores optimizados para ofrecer velocidad, estabilidad y disponibilidad'
     },
     {
         icon:BiDisc,
-        title:'Confiable',
-        desc:'The phrasal sequence of the is now so that many campaign and benefit'
+        title:'Seguridad',
+        desc:'Tecnología estable y segura diseñada para respaldar el crecimiento de tu negocio'
     },
    
 ]

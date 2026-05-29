@@ -1,7 +1,7 @@
 {
   "name": "hoxia",
   "version": "1.0.0",
-  "description": "Hoxia - React Js Web Hosting & Web Domain Template",
+  "description": "Dreameld - React Js Web Hosting & Web Domain Template",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

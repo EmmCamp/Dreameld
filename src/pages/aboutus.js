@@ -235,7 +235,7 @@ export default function AboutUs() {
                     <div className="flex">
                         <AiOutlineQuestionCircle className="h-8 text-sky-500 me-3 w-6" />
                         <div className="flex-1">
-                            <h5 className="mb-2 text-lg font-medium">How our <span className="text-sky-500">Hoxia</span> work ?</h5>
+                            <h5 className="mb-2 text-lg font-medium">How our <span className="text-sky-500">Dreameld</span> work ?</h5>
                             <p className="text-slate-400">Due to its widespread use as filler text for layouts, non-readability is of great importance: human perception is tuned to recognize certain patterns and repetitions in texts.</p>
                         </div>
                     </div>
@@ -259,7 +259,7 @@ export default function AboutUs() {
                     <div className="flex">
                         <AiOutlineQuestionCircle className="h-8 text-sky-500 me-3 w-6" />
                         <div className="flex-1">
-                            <h5 className="mb-2 text-lg font-medium"> Is <span className="text-sky-500">Hoxia</span> safer to use with my account ?</h5>
+                            <h5 className="mb-2 text-lg font-medium"> Is <span className="text-sky-500">Dreameld</span> safer to use with my account ?</h5>
                             <p className="text-slate-400">The most well-known dummy text is the 'Lorem Ipsum', which is said to have originated in the 16th century. Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to 'proper' Latin.</p>
                         </div>
                     </div>

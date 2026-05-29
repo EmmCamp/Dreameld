@@ -12,8 +12,8 @@ export default function Faq(){
     return(
             <div className="container relative md:mt-24 mt-16">
                 <div className="grid grid-cols-1 pb-8 text-center">
-                    <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium">Frequently Asked Questions</h3>
-                    <p className="text-slate-400 max-w-xl mx-auto">Create, collaborate, and turn your ideas into incredible products with the definitive platform for digital design.</p>
+                    <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium">Preguntas Frecuentes</h3>
+                    <p className="text-slate-400 max-w-xl mx-auto">Resolvemos tus dudas sobre hosting, infraestructura y servicios digitales para ayudarte a crecer con tecnología confiable y soporte cercano.</p>
                 </div>
                 <div id="accordion-collapse" data-accordion="collapse" className="grid md:grid-cols-2 grid-cols-1 mt-8 md:gap-[30px]">
                     <div>
