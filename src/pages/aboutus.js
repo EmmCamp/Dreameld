@@ -8,6 +8,7 @@ import WorldMap from "../components/worldMap";
 import Newsletter from "../components/newslatter";
 import Footer from "../components/footer";
 import Switcher from "../components/switcher";
+import Metricas from "../components/Metricas"; // 
 
 import { serviceData, pilaresData, teamData } from "../data/data";
 import { AiOutlineCheckCircle, MdMailOutline, FiHexagon, FiFacebook, FiInstagram, FiLinkedin, AiOutlineQuestionCircle } from '../assets/icons/vander'
@@ -163,37 +164,52 @@ export default function AboutUs() {
     </div>
 
     {/* GRIDS DE LAS TARJETAS */}
-    <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
-        {pilaresData.map((item, index) => {
-            let Icon = item.icon
-            return (
-                <div 
-                    className="group relative p-6 shadow-md dark:shadow-gray-800 hover:shadow-xl hover:bg-[#7c3aed] transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-slate-900 overflow-hidden border border-gray-100 dark:border-gray-800" 
-                    key={index}
-                >
-                    {/* Contenedor del Icono Hexagonal */}
-                    <div className="relative overflow-hidden text-transparent -m-3 mb-2">
-                        <FiHexagon className="h-24 w-24 fill-[#7c3aed]/[0.08] group-hover:fill-white/20 transition-all duration-500" />
-                        <div className="absolute top-2/4 -translate-y-2/4 start-8 text-[#7c3aed] group-hover:text-white transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center">
-                            <Icon />
-                        </div>
-                    </div>
-
-                    {/* Textos de la tarjeta (Títulos y descripciones) */}
-                    <div className="mt-6 relative z-10">
-                        <h5 className="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-white transition-all duration-500 ease-in-out">
-                            {item.title}
-                        </h5>
-                        <p className="text-slate-400 group-hover:text-white/80 transition-all duration-500 ease-in-out mt-3 text-sm leading-relaxed">
-                            {item.desc}
-                        </p>
-                    </div>
+<div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
+    {pilaresData.map((item, index) => {
+       
+       return (
+            <div 
+                className="group relative p-6 shadow-md dark:shadow-gray-800 hover:shadow-xl hover:border-violet-500 transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-slate-900 overflow-hidden border border-gray-100 dark:border-gray-800" 
+                key={index}
+            >
+                {/* Textos de la tarjeta (Títulos y descripciones) */}
+                <div className="relative z-10">
+                    {/* Título: En hover cambia a morado Dreameld para que resalte y NO desaparezca */}
+                    <h5 className="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-[#7c3aed] transition-all duration-500 ease-in-out">
+                        {item.title}
+                    </h5>
+                    {/* Descripción: Espacio pulido y texto legible */}
+                    <p className="text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-all duration-500 ease-in-out mt-3 text-sm leading-relaxed">
+                        {item.desc}
+                    </p>
                 </div>
-            )
-        })}
-    </div>
+            </div>
+        )
+    })}
+</div>
 </div>
             <WorldMap />
+            
+<div className="container relative md:mt-24 mt-16 mx-auto">
+    <div className="grid md:grid-cols-4 grid-cols-2 gap-[30px] text-center">
+        <div className="p-6">
+            <h4 className="md:text-4xl text-3xl font-bold mb-2">99.99%</h4>
+            <p className="text-slate-400 text-sm font-medium">Uptime Garantizado</p>
+        </div>
+        <div className="p-6">
+            <h4 className="md:text-4xl text-3xl font-bold mb-2">+500</h4>
+            <p className="text-slate-400 text-sm font-medium">Sitios Optimizados</p>
+        </div>
+        <div className="p-6">
+            <h4 className="md:text-4xl text-3xl font-bold mb-2">&lt; 15 min</h4>
+            <p className="text-slate-400 text-sm font-medium">Tiempo de Respuesta</p>
+        </div>
+        <div className="p-6">
+            <h4 className="md:text-4xl text-3xl font-bold mb-2">24/7/365</h4>
+            <p className="text-slate-400 text-sm font-medium">Monitoreo Activo</p>
+        </div>
+    </div>
+</div>
 
             {/* SECCIÓN TEAM MEMBERS */}
             <div className="container relative md:mt-24 mt-16">
