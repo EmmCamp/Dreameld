@@ -328,7 +328,7 @@ export const serviceData = [
     },
    
 ]
-//Tarjetas de Mision, Vision, Transparencia y Calidad Obsesiva
+//Tarjetas de Mision, Vision, Transparencia y Excelencia
 export const pilaresData = [
     {
         icon: LuUsers, 
@@ -338,16 +338,16 @@ export const pilaresData = [
     {
         icon: VscServer, 
         title: 'Visión',
-        desc: 'Convertirnos en el aliado tecnológico definitivo de Latinoamérica, donde la estabilidad de tu plataforma nunca vuelva a depender de una respuesta automatizada.'
+        desc: 'Convertirnos en el aliado tecnológico definitivo de tu negocio, donde la estabilidad de tu plataforma nunca vuelva a depender de una respuesta automatizada.'
     },
     {
         icon: MdOutlineMarkEmailRead, 
         title: 'Transparencia',
-        desc: 'Sin letras chiquitas ni caídas sorpresa. Te hablamos de ingeniero a ingeniero, asumiendo la responsabilidad del uptime de tu negocio con honestidad total.'
+        desc: 'Sin letras chiquitas ni caídas sorpresa. Te hablamos con total claridad y sin rodeos, asumiendo la responsabilidad del uptime de tu negocio con honestidad total.'
     },
     {
         icon: TbCloudHeart, 
-        title: 'Calidad Obsesiva',
+        title: 'Excelencia',
         desc: 'No nos conformamos con que tu sitio "cargue". Optimizamos código, pulimos servidores y cableamos arquitecturas pensadas para escalar de forma masiva.'
     },
 ];

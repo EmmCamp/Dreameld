@@ -7,6 +7,7 @@
    Created: March 2022
    File: Main Css File
 */
+
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@400;500;600;700&display=swap");
 /* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
 */
@@ -4573,3 +4574,4 @@ html[dir=rtl] .tns-visually-hidden {
     width: 75rem !important;
   }
 }
+

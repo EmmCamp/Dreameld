@@ -78,22 +78,24 @@ export default function Navbar({ navClass, ulClass, navLight }) {
         <nav id="topnav" className={`${scroll ? 'nav-sticky' : ''} ${navClass}`}>
             <div className="container relative">
                 
-                {/* === LOGO DINÁMICO DE DREAMELD (CAMBIA EN MOTO OSCURO) === */}
+                {/* === LOGO DINÁMICO DE DREAMELD (CAMBIA EN MODO OSCURO) === */}
 <Link className="logo flex items-center" to="/index" style={{ height: 'auto', padding: '10px 0' }}>
     {/* LOGO VERSIÓN DÍA: Se muestra normalmente, se oculta en dark mode */}
-    <img 
-        src="/Dream1.png" 
-        className="inline-block dark:hidden"
-        alt="Dreameld" 
-        style={{ 
-            height: '40px', 
-            width: 'auto', 
-            maxHeight: 'none', 
-            maxWidth: '220px',
-            display: 'block',
-            objectFit: 'contain'
-        }} 
-    />
+   <img 
+    src="/Dream1.png" 
+    className="inline-block dark:hidden"
+    alt="Dreameld" 
+    style={{ 
+        height: '40px', 
+        width: 'auto', 
+        maxHeight: 'none', 
+        maxWidth: '220px',
+        display: 'block',
+        objectFit: 'contain',
+        // ¡Aquí está la magia interactiva!
+        filter: typeof scroll !== 'undefined' && scroll ? 'none' : 'brightness(0) invert(1)'
+    }} 
+/>
     {/* LOGO VERSIÓN NOCHE: Se oculta normalmente, aparece solo en dark mode */}
     <img 
         src="/Dreameld_3A.png" 

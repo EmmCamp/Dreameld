@@ -9,6 +9,7 @@ import Newsletter from "../components/newslatter";
 import Footer from "../components/footer";
 import Switcher from "../components/switcher";
 import Metricas from "../components/Metricas"; // 
+import { FiZap, FiShield, FiMessageSquare, FiRefreshCw } from 'react-icons/fi';
 
 import { serviceData, pilaresData, teamData } from "../data/data";
 import { AiOutlineCheckCircle, MdMailOutline, FiHexagon, FiFacebook, FiInstagram, FiLinkedin, AiOutlineQuestionCircle } from '../assets/icons/vander'
@@ -144,7 +145,7 @@ export default function AboutUs() {
                                         }}
                                     >
                                         <MdMailOutline className="me-2 text-white" />
-                                        Habla con un Ingeniero
+                                        Platica con un experto
                                     </Link>
                                 </div>
                             </div>
@@ -188,6 +189,7 @@ export default function AboutUs() {
     })}
 </div>
 </div>
+{/* Sección del mapa documentado
             <WorldMap />
             
 <div className="container relative md:mt-24 mt-16 mx-auto">
@@ -210,8 +212,95 @@ export default function AboutUs() {
         </div>
     </div>
 </div>
+*/}
+    <div className="py-12 my-10">
+    <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 max-w-6xl mx-auto px-4">
+        
+        {/* Bloque 1: Uptime */}
+        <div 
+            className="text-center flex flex-col items-center p-6 rounded-xl transition-all duration-300"
+            style={{ transform: 'translateY(0px)', boxShadow: 'none' }}
+            onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-8px)';
+                e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.05)';
+            }}
+            onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0px)';
+                e.currentTarget.style.boxShadow = 'none';
+            }}
+        >
+            <div className="mb-4 rounded-full flex items-center justify-center bg-indigo-50/70" style={{ width: '70px', height: '70px' }}>
+                <FiZap className="text-4xl" style={{ color: '#510bf7' }} />
+            </div>
+            <h3 className="text-3xl font-bold mb-1" style={{ color: '#16082c' }}>99.99%</h3>
+            <p className="text-slate-500 font-medium text-sm">Uptime Garantizado</p>
+        </div>
+
+        {/* Bloque 2: Seguridad (SSL) */}
+        <div 
+            className="text-center flex flex-col items-center p-6 rounded-xl transition-all duration-300"
+            style={{ transform: 'translateY(0px)', boxShadow: 'none' }}
+            onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-8px)';
+                e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.05)';
+            }}
+            onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0px)';
+                e.currentTarget.style.boxShadow = 'none';
+            }}
+        >
+            <div className="mb-4 rounded-full flex items-center justify-center bg-indigo-50/70" style={{ width: '70px', height: '70px' }}>
+                <FiShield className="text-4xl" style={{ color: '#510bf7' }} />
+            </div>
+            <h3 className="text-3xl font-bold mb-1" style={{ color: '#000000' }}>Seguridad</h3>
+            <p className="text-slate-500 font-medium text-sm">Certificado SSL gratuito</p>
+        </div>
+
+        {/* Bloque 3: WhatsApp */}
+        <div 
+            className="text-center flex flex-col items-center p-6 rounded-xl transition-all duration-300"
+            style={{ transform: 'translateY(0px)', boxShadow: 'none' }}
+            onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-8px)';
+                e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.05)';
+            }}
+            onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0px)';
+                e.currentTarget.style.boxShadow = 'none';
+            }}
+        >
+            <div className="mb-4 rounded-full flex items-center justify-center bg-emerald-50/70" style={{ width: '70px', height: '70px' }}>
+                <FiMessageSquare className="text-4xl" style={{ color: '#25D366' }} />
+            </div>
+            <h3 className="text-3xl font-bold mb-1" style={{ color: '#000000' }}>&lt; 15 min</h3>
+            <p className="text-slate-500 font-medium text-sm">Soporte vía WhatsApp</p>
+        </div>
+
+        {/* Bloque 4: Migración */}
+        <div 
+            className="text-center flex flex-col items-center p-6 rounded-xl transition-all duration-300"
+            style={{ transform: 'translateY(0px)', boxShadow: 'none' }}
+            onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-8px)';
+                e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.05)';
+            }}
+            onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0px)';
+                e.currentTarget.style.boxShadow = 'none';
+            }}
+        >
+            <div className="mb-4 rounded-full flex items-center justify-center bg-indigo-50/70" style={{ width: '70px', height: '70px' }}>
+                <FiRefreshCw className="text-4xl" style={{ color: '#510bf7' }} />
+            </div>
+            <h3 className="text-3xl font-bold mb-1" style={{ color: '#000000' }}>Migración $0</h3>
+            <p className="text-slate-500 font-medium text-sm">Migración gratuita</p>
+        </div>
+
+    </div>
+</div>
 
             {/* SECCIÓN TEAM MEMBERS */}
+           {/*
             <div className="container relative md:mt-24 mt-16">
                 <div className="grid grid-cols-1 pb-8 text-center">
                     <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium">Our Team Members</h3>
@@ -239,44 +328,44 @@ export default function AboutUs() {
                     })}
                 </div>
             </div>
-
+*/}
             {/* SECCIÓN PREGUNTAS FRECUENTES */}
             <div className="container relative md:mt-24 mt-16">
                 <div className="grid grid-cols-1 pb-8 text-center">
-                    <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium">Questions & Answers</h3>
-                    <p className="text-slate-400 max-w-xl mx-auto">Create, collaborate, and turn your ideas into incredible products with the definitive platform for digital design.</p>
+                    <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium">Resolvemos tus dudas</h3>
+                    <p className="text-slate-400 max-w-xl mx-auto">Resolvemos tus dudas sin enredos técnicos. Te respondemos de forma simple y clara para que tú solo te preocupes por hacer despegar tu proyecto.</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
                     <div className="flex">
-                        <AiOutlineQuestionCircle className="h-8 text-sky-500 me-3 w-6" />
+                        <AiOutlineQuestionCircle className="h-8 me-3 w-6" style={{ color: '#510bf7' }} />
                         <div className="flex-1">
-                            <h5 className="mb-2 text-lg font-medium">How our <span className="text-sky-500">Dreameld</span> work ?</h5>
-                            <p className="text-slate-400">Due to its widespread use as filler text for layouts, non-readability is of great importance: human perception is tuned to recognize certain patterns and repetitions in texts.</p>
+                            <h5 className="mb-2 text-lg font-medium">¿Necesito conocimientos previos? </h5>
+                            <p className="text-slate-400">Cero. No necesitas saber de código, servidores ni configuraciones avanzadas para estar con nosotros. <span style={{ color: '#510bf7' }}>Dreameld</span> está pensado para que cualquier persona pueda gestionar su sitio, y para todo lo demás, tienes a nuestro equipo de soporte humano listo para ayudarte en minutos.</p>
                         </div>
                     </div>
 
                     <div className="flex">
-                        <AiOutlineQuestionCircle className="h-8 text-sky-500 me-3 w-6 " />
+                        <AiOutlineQuestionCircle className="h-8 me-3 w-6" style={{ color: '#510bf7' }} />
                         <div className="flex-1">
-                            <h5 className="mb-2 text-lg font-medium"> What is the main process open account ?</h5>
-                            <p className="text-slate-400">If the distribution of letters and 'words' is random, the reader will not be distracted from making a neutral judgement on the visual impact</p>
+                            <h5 className="mb-2 text-lg font-medium"> ¿Qué pasa si tengo una duda técnica específica?</h5>
+                            <p className="text-slate-400">No estás solo. Además del contenido de la academia, tienes nuestro soporte real por <span style={{ color: '#25D366' }}>WhatsApp.</span> Si te atoras en algún paso o algo no queda claro, nuestros ingenieros te ayudarán directamente. Tu éxito es nuestra prioridad.</p>
                         </div>
                     </div>
 
                     <div className="flex">
-                        <AiOutlineQuestionCircle className="h-8 text-sky-500 me-3 w-6" />
+                        <AiOutlineQuestionCircle className="h-8 me-3 w-6" style={{ color: '#510bf7' }} />
                         <div className="flex-1">
-                            <h5 className="mb-2 text-lg font-medium"> How to make unlimited data entry ?</h5>
-                            <p className="text-slate-400">Furthermore, it is advantageous when the dummy text is relatively realistic so that the layout impression of the final publication is not compromised.</p>
+                            <h5 className="mb-2 text-lg font-medium"> ¿Ustedes me ayudan a mudar mi sitio web desde mi hosting actual?</h5>
+                            <p className="text-slate-400">¡Por supuesto! Nosotros nos encargamos de todo el proceso de migración de forma completamente gratuita. Mudamos tus archivos, correos y bases de datos sin que tu sitio sufra caídas ni pierdas información en el camino. Tú solo nos das luz verde y nuestro equipo hace la magia.</p>
                         </div>
                     </div>
 
                     <div className="flex">
-                        <AiOutlineQuestionCircle className="h-8 text-sky-500 me-3 w-6" />
+                        <AiOutlineQuestionCircle className="h-8 me-3 w-6" style={{ color: '#510bf7' }} />
                         <div className="flex-1">
-                            <h5 className="mb-2 text-lg font-medium"> Is <span className="text-sky-500">Dreameld</span> safer to use with my account ?</h5>
-                            <p className="text-slate-400">The most well-known dummy text is the 'Lorem Ipsum', which is said to have originated in the 16th century. Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to 'proper' Latin.</p>
+                            <h5 className="mb-2 text-lg font-medium"> ¿Puedo cambiarme a un plan más grande si mi negocio empieza a recibir más visitas? </h5>
+                            <p className="text-slate-400">Claro que sí, el cambio es inmediato y sin complicaciones. Si lanzas una campaña o tu tráfico aumenta de golpe, puedes subir de plan en minutos para darle más potencia a tu sitio, sin contratos forzosos ni procesos lentos. Tu hosting crece al ritmo de tu negocio.</p>
                         </div>
                     </div>
                 </div>
