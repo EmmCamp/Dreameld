@@ -19,7 +19,7 @@ export default function Contact() {
 <section 
     className="relative table w-full md:py-40 py-36 bg-[url('../../assets/images/bg/bg5.png')] bg-center bg-cover"
     style={{ 
-        backgroundColor: document.documentElement.classList.contains('dark') ? 'transparent' : 'rgba(30, 7, 68, 0.03)' 
+        backgroundColor: document.documentElement.classList.contains('dark') ? 'transparent' : 'rgba(30, 7, 68, 0.0)' 
     }}
 >
     {/* CAPA DE OPACIDAD QUE RESPETA EL MODO OSCURO ORIGINAL DE LA PLANTILLA */}

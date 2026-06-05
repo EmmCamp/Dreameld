@@ -343,12 +343,12 @@ export const pilaresData = [
     {
         icon: MdOutlineMarkEmailRead, 
         title: 'Transparencia',
-        desc: 'Sin letras chiquitas ni caídas sorpresa. Te hablamos con total claridad y sin rodeos, asumiendo la responsabilidad del uptime de tu negocio con honestidad total.'
+        desc: 'Sin letras chiquitas ni caídas sorpresa. Te hablamos con total claridad y sin rodeos, asumiendo la responsabilidad de la continuidad de tu negocio.'
     },
     {
         icon: TbCloudHeart, 
         title: 'Excelencia',
-        desc: 'No nos conformamos con que tu sitio "cargue". Optimizamos código, pulimos servidores y cableamos arquitecturas pensadas para escalar de forma masiva.'
+        desc: 'Tecnología estable, eficiente y sencilla. Nosotros cuidamos la infraestructura para que tú te enfoques en crecer.'
     },
 ];
 

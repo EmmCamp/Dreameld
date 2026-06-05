@@ -341,7 +341,7 @@ export default function AboutUs() {
                         <AiOutlineQuestionCircle className="h-8 me-3 w-6" style={{ color: '#510bf7' }} />
                         <div className="flex-1">
                             <h5 className="mb-2 text-lg font-medium">¿Necesito conocimientos previos? </h5>
-                            <p className="text-slate-400">Cero. No necesitas saber de código, servidores ni configuraciones avanzadas para estar con nosotros. <span style={{ color: '#510bf7' }}>Dreameld</span> está pensado para que cualquier persona pueda gestionar su sitio, y para todo lo demás, tienes a nuestro equipo de soporte humano listo para ayudarte en minutos.</p>
+                            <p className="text-slate-400">No, no necesitas saber de código, servidores ni configuraciones avanzadas para estar con nosotros. <span style={{ color: '#510bf7' }}>Dreameld</span> está pensado para que cualquier persona pueda gestionar su sitio, y para todo lo demás, tienes a nuestro equipo de soporte humano listo para ayudarte en minutos.</p>
                         </div>
                     </div>
 
@@ -349,7 +349,7 @@ export default function AboutUs() {
                         <AiOutlineQuestionCircle className="h-8 me-3 w-6" style={{ color: '#510bf7' }} />
                         <div className="flex-1">
                             <h5 className="mb-2 text-lg font-medium"> ¿Qué pasa si tengo una duda técnica específica?</h5>
-                            <p className="text-slate-400">No estás solo. Además del contenido de la academia, tienes nuestro soporte real por <span style={{ color: '#25D366' }}>WhatsApp.</span> Si te atoras en algún paso o algo no queda claro, nuestros ingenieros te ayudarán directamente. Tu éxito es nuestra prioridad.</p>
+                            <p className="text-slate-400">Contamos con un canal de soporte directo a través de <span style={{ color: '#25D366' }}>WhatsApp.</span> .Si te surge alguna duda o requieres asistencia en algún paso de tu configuración, nuestro equipo de ingenieros te brindará ayuda personalizada. Tu éxito es nuestra prioridad.</p>
                         </div>
                     </div>
 
