@@ -13,14 +13,27 @@ export default function Contact() {
 
     return (
         <>
-            <Navbar navClass="defaultscroll is-sticky" ulClass='navigation-menu justify-end ' />
-            <section className="relative table w-full md:py-40 py-36 bg-[url('../../assets/images/bg/bg5.png')] bg-center bg-cover">
-                <div className="absolute inset-0 bg-sky-500/5"></div>
-                <div className="container relative">
-                    <div className="grid grid-cols-1 text-center mt-12">
-                        <h3 className="md:text-4xl text-3xl md:leading-snug leading-snug font-medium">Contáctanos</h3>
-                    </div>
-                </div>
+           <Navbar navClass="defaultscroll is-sticky" ulClass='navigation-menu justify-end' />
+
+{/* LE ASIGNAMOS EL MORADO EN MODO DÍA CON UN STYLE LIMPIO (SIN EXTRA-CAPAS) */}
+<section 
+    className="relative table w-full md:py-40 py-36 bg-[url('../../assets/images/bg/bg5.png')] bg-center bg-cover"
+    style={{ 
+        backgroundColor: document.documentElement.classList.contains('dark') ? 'transparent' : 'rgba(30, 7, 68, 0.03)' 
+    }}
+>
+    {/* CAPA DE OPACIDAD QUE RESPETA EL MODO OSCURO ORIGINAL DE LA PLANTILLA */}
+    <div className="absolute inset-0 bg-sky-500/5 dark:bg-slate-950/80"></div>
+    
+    <div className="container relative" style={{ zIndex: 2 }}>
+        <div className="grid grid-cols-1 text-center mt-12">
+            <h3 className="md:text-4xl text-3xl md:leading-snug leading-snug font-medium text-slate-900 dark:text-white">
+                Contáctanos
+            </h3>
+        </div>
+    </div>
+
+
 
                 <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
                     <ul className="tracking-[0.5px] mb-0 inline-block">

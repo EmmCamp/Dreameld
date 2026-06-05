@@ -35,7 +35,7 @@ import Maintenance from './pages/maintenance';
 import Error from './pages/error';
 import ThankYou from './pages/thankyou';
 import Contact from './pages/contact';
-
+import Software from './pages/software';
 function App() {
   return (
     <Routes>
@@ -76,7 +76,7 @@ function App() {
       <Route path='/error' exact element={ <Error/>}/>
       <Route path='/thankyou' exact element={<ThankYou/>}/>
       <Route path='/contact' exact element={<Contact/>}/>
-      
+      <Route path='/software' exact element={<Software/>}/>
     </Routes>
    
   );

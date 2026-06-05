@@ -229,6 +229,7 @@ export default function Navbar({ navClass, ulClass, navLight }) {
                         </li>*/}
                         <li className={manu === "Inicio" ? "active" : ""}><Link to="/index" className="sub-menu-item">Inicio</Link></li>
                         <li className={manu === "aboutus" ? "active" : ""}><Link to="/aboutus" className="sub-menu-item">Nosotros</Link></li>
+                        <li className={manu === "software" ? "active" : ""}><Link to="/software" className="sub-menu-item">Software</Link></li>
                         <li className={manu === "hosting-shared" ? "active" : ""}><Link to="/hosting-shared" className="sub-menu-item">Web Hosting</Link></li>
                         {/*
                         <li className={`${["hosting-shared", "hosting-vps", "hosting-dedicated", "hosting-cloud", "hosting-domain", "hosting-reseller"].includes(manu) ? "active" : ""} has-submenu parent-menu-item`}><Link to="#"> Hosting </Link><span className="menu-arrow"></span>

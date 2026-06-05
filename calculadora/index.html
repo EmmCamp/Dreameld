@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Ingresos — Hosting Reseller</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { font-family: system-ui, sans-serif; background: #f5f5f3; color: #1a1a1a; margin: 0; padding: 2rem 1rem; }
+  .container { max-width: 680px; margin: 0 auto; }
+  h1 { font-size: 20px; font-weight: 500; margin: 0 0 6px; }
+  .subtitle { font-size: 13px; color: #666; margin: 0 0 2rem; }
+  .section-title { font-size: 11px; font-weight: 500; color: #999; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 10px; }
+  .slider-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .slider-label { font-size: 13px; color: #555; width: 95px; flex-shrink: 0; }
+  input[type=range] { flex: 1; accent-color: #185FA5; }
+  .slider-val { font-size: 13px; font-weight: 500; min-width: 24px; text-align: right; }
+  .slider-rev { font-size: 12px; color: #666; min-width: 70px; text-align: right; }
+  .status-bar { border-radius: 8px; padding: 12px 16px; margin: 1.5rem 0 1rem; font-size: 13px; font-weight: 500; }
+  .status-bar.loss { background: #FCEBEB; color: #791F1F; }
+  .status-bar.break { background: #FAEEDA; color: #633806; }
+  .status-bar.gain { background: #EAF3DE; color: #27500A; }
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 1.5rem; }
+  .metric { background: #ebebeb; border-radius: 8px; padding: .75rem 1rem; }
+  .metric-label { font-size: 11px; color: #666; margin: 0 0 4px; }
+  .metric-val { font-size: 20px; font-weight: 500; margin: 0; }
+  .pkg-labels { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 1rem; }
+  .pkg-label { display: flex; align-items: center; gap: 5px; font-size: 12px; color: #555; }
+  .swatch { width: 10px; height: 10px; border-radius: 2px; }
+  .chart-wrap { position: relative; width: 100%; height: 220px; margin-bottom: 1.5rem; }
+  .breakdown { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 1.5rem; }
+  .bk-card { background: #fff; border: 0.5px solid #ddd; border-radius: 8px; padding: .75rem 1rem; }
+  .bk-name { font-size: 12px; color: #666; margin: 0 0 2px; }
+  .bk-val { font-size: 16px; font-weight: 500; margin: 0; }
+  .bk-sub { font-size: 11px; color: #888; margin: 2px 0 0; }
+  @media (max-width: 480px) {
+    .metrics { grid-template-columns: repeat(2, 1fr); }
+    .breakdown { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Calculadora de ingresos — Hosting Reseller</h1>
+  <p class="subtitle">Costo anual del reseller: $4,345 · Mueve los sliders para ver tu ganancia</p>
+
+  <p class="section-title">Clientes por paquete</p>
+
+  <div class="slider-row">
+    <span class="slider-label"><i class="ti ti-rocket" style="font-size:13px;margin-right:4px"></i>Básico</span>
+    <input type="range" min="0" max="30" step="1" value="2" id="s1" oninput="update()">
+    <span class="slider-val" id="v1">2</span>
+    <span class="slider-rev" id="r1">$3,600</span>
+  </div>
+  <div class="slider-row">
+    <span class="slider-label"><i class="ti ti-star" style="font-size:13px;margin-right:4px"></i>Profesional</span>
+    <input type="range" min="0" max="20" step="1" value="1" id="s2" oninput="update()">
+    <span class="slider-val" id="v2">1</span>
+    <span class="slider-rev" id="r2">$3,200</span>
+  </div>
+  <div class="slider-row">
+    <span class="slider-label"><i class="ti ti-building" style="font-size:13px;margin-right:4px"></i>Negocio</span>
+    <input type="range" min="0" max="10" step="1" value="0" id="s3" oninput="update()">
+    <span class="slider-val" id="v3">0</span>
+    <span class="slider-rev" id="r3">$0</span>
+  </div>
+
+  <div id="status" class="status-bar gain"></div>
+
+  <div class="metrics">
+    <div class="metric"><p class="metric-label">Ingresos totales</p><p class="metric-val" id="m-ing">$0</p></div>
+    <div class="metric"><p class="metric-label">Costo reseller</p><p class="metric-val" style="color:#A32D2D">$4,345</p></div>
+    <div class="metric"><p class="metric-label">Ganancia neta</p><p class="metric-val" id="m-gan">$0</p></div>
+    <div class="metric"><p class="metric-label">Clientes totales</p><p class="metric-val" id="m-cli">0</p></div>
+  </div>
+
+  <p class="section-title">Ingresos por paquete</p>
+  <div class="pkg-labels">
+    <span class="pkg-label"><span class="swatch" style="background:#185FA5"></span>Básico $1,800</span>
+    <span class="pkg-label"><span class="swatch" style="background:#1D9E75"></span>Profesional $3,200</span>
+    <span class="pkg-label"><span class="swatch" style="background:#854F0B"></span>Negocio $5,500</span>
+    <span class="pkg-label"><span class="swatch" style="background:#E24B4A;opacity:.6"></span>Costo reseller</span>
+  </div>
+  <div class="chart-wrap">
+    <canvas id="myChart" role="img" aria-label="Gráfica de barras de ingresos acumulados vs costo reseller">Ingresos acumulados vs costo reseller $4,345.</canvas>
+  </div>
+
+  <p class="section-title">Punto de equilibrio por paquete solo</p>
+  <div class="breakdown">
+    <div class="bk-card">
+      <p class="bk-name"><i class="ti ti-rocket" style="font-size:12px;margin-right:3px"></i>Solo Básico</p>
+      <p class="bk-val">3 clientes</p>
+      <p class="bk-sub">3 × $1,800 = $5,400</p>
+    </div>
+    <div class="bk-card">
+      <p class="bk-name"><i class="ti ti-star" style="font-size:12px;margin-right:3px"></i>Solo Profesional</p>
+      <p class="bk-val">2 clientes</p>
+      <p class="bk-sub">2 × $3,200 = $6,400</p>
+    </div>
+    <div class="bk-card">
+      <p class="bk-name"><i class="ti ti-building" style="font-size:12px;margin-right:3px"></i>Solo Negocio</p>
+      <p class="bk-val">1 cliente</p>
+      <p class="bk-sub">1 × $5,500 = $5,500</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const COST = 4345;
+const PRICES = [1800, 3200, 5500];
+let chart;
+
+function fmt(n) {
+  return '$' + Math.round(n).toLocaleString('es-MX');
+}
+
+function update() {
+  const c1 = parseInt(document.getElementById('s1').value);
+  const c2 = parseInt(document.getElementById('s2').value);
+  const c3 = parseInt(document.getElementById('s3').value);
+  const r1 = c1 * PRICES[0], r2 = c2 * PRICES[1], r3 = c3 * PRICES[2];
+  const total = r1 + r2 + r3;
+  const ganancia = total - COST;
+
+  document.getElementById('v1').textContent = c1;
+  document.getElementById('v2').textContent = c2;
+  document.getElementById('v3').textContent = c3;
+  document.getElementById('r1').textContent = fmt(r1);
+  document.getElementById('r2').textContent = fmt(r2);
+  document.getElementById('r3').textContent = fmt(r3);
+  document.getElementById('m-ing').textContent = fmt(total);
+  document.getElementById('m-cli').textContent = c1 + c2 + c3;
+
+  const ganEl = document.getElementById('m-gan');
+  ganEl.textContent = (ganancia < 0 ? '-' : '') + fmt(Math.abs(ganancia));
+  ganEl.style.color = ganancia >= 0 ? '#3B6D11' : '#A32D2D';
+
+  const sb = document.getElementById('status');
+  if (ganancia < 0) {
+    sb.className = 'status-bar loss';
+    sb.textContent = 'Aún te faltan ' + fmt(Math.abs(ganancia)) + ' para cubrir el costo del reseller.';
+  } else if (ganancia === 0) {
+    sb.className = 'status-bar break';
+    sb.textContent = 'Punto de equilibrio exacto — cubres el costo del reseller.';
+  } else {
+    sb.className = 'status-bar gain';
+    sb.textContent = 'Ganancia neta de ' + fmt(ganancia) + ' después de cubrir el reseller.';
+  }
+
+  if (chart) {
+    chart.data.datasets[0].data = [r1, 0, 0];
+    chart.data.datasets[1].data = [0, r2, 0];
+    chart.data.datasets[2].data = [0, 0, r3];
+    chart.data.datasets[3].data = [COST, COST, COST];
+    chart.update();
+  }
+}
+
+window.addEventListener('load', function() {
+  const ctx = document.getElementById('myChart').getContext('2d');
+  chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Starter', 'Business', 'Agency'],
+      datasets: [
+        { label: 'Starter', data: [0,0,0], backgroundColor: '#185FA5' },
+        { label: 'Business', data: [0,0,0], backgroundColor: '#1D9E75' },
+        { label: 'Agency', data: [0,0,0], backgroundColor: '#854F0B' },
+        { label: 'Costo reseller', data: [COST,COST,COST], type: 'line', borderColor: '#E24B4A', borderDash: [6,3], borderWidth: 2, pointRadius: 0, fill: false }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { display: false } },
+        y: { ticks: { callback: v => '$' + (v/1000).toFixed(0) + 'k' }, grid: { color: 'rgba(0,0,0,0.06)' } }
+      }
+    }
+  });
+  update();
+});
+</script>
+</body>
+</html>
