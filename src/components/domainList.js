@@ -1,13 +1,13 @@
 import React from "react";
 
-import { domainData } from "../data/data";
+import { partnersData } from "../data/data";
 import TinySlider from "tiny-slider-react";
 import '../../node_modules/tiny-slider/dist/tiny-slider.css'
 
 let settings = {
     container: '.tiny-six-item',
-    controls: true,
-    mouseDrag: true,
+    controls: false,
+    mouseDrag: false,
     loop: true,
     rewind: true,
     autoplay: true,
@@ -43,16 +43,17 @@ export default function DomainList(){
             <div className="grid grid-cols-1 relative">
                 <div className="tiny-six-item">
                 <TinySlider settings={settings}>
-                    {domainData.map((item,index) =>{
+                    {partnersData.map((item,index) =>{
                             return(
                                 <div className="tiny-slide" key={index}>
-                                    <div className="bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-800 p-4 m-2 text-center">
-                                        <img src={item.image} className="rounded-md shadow dark:shadow-gray-800 mx-auto h-16 w-16 mb-3" alt=""/>
-                                        <span className="flex justify-center mt-2">
+                                    {/*<div className="bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-800 p-4 m-2 text-center">*/}
+                                    <div className="nobg dark:nobg p-4 m-2 text-center">
+                                        <img src={item.image} className="mx-auto h-32 w-32 " alt=""/>
+                                        {/*<span className="flex justify-center mt-2">
                                             <span className="text-base text-slate-400">$</span>
                                             <span className="text-lg font-semibold h6 mx-1">{item.amount}</span>
                                             <span className="text-base text-slate-400 self-end">/year</span>
-                                        </span>
+                                        </span>*/}
                                     </div>
                                 </div>
                             )

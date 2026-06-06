@@ -2,10 +2,10 @@ import React from "react";
 
 import Tagline from "../components/tagline";
 import Navbar from "../components/navbar";
+import ServerOne from "../components/serverOne";
 import DomainList from "../components/domainList";
 import PricingTwo from "../components/pricingTwo";
 import HostingServices from "../components/hostingServices";
-import ServerOne from "../components/serverOne";
 import ServerTwo from "../components/serverTwo";
 import Faq from "../components/faq";
 import Newsletter from "../components/newslatter";
@@ -27,11 +27,11 @@ export default function IndexFour(){
             <div className="container relative">
                 <div className="grid grid-cols-1 items-center text-center mt-10">
                     <h4 className="font-semibold lg:leading-normal leading-normal text-4xl lg:text-5xl mb-5 text-white">Impulsamos tus procesos digitales <br/> con
-                     <span className="typewrite text-yellow-500" data-period="2000" data-type='[ "Automatizaciones", "Software", "Automatizaciones", "Consultoría" ]'> <span className="wrap"></span> </span>
+                     <span className="typewrite text-green-500" data-period="2000" data-type='[ "Automatizaciones", "Software", "Automatizaciones", "Consultoría" ]'> <span className="wrap"></span> </span>
                      <TypeAnimation
                         sequence={[
                             'Infraestructura',
-                            2000, 
+                            2000,
                             'Software',
                             2000,
                             'Automatizaciones',
@@ -41,10 +41,10 @@ export default function IndexFour(){
                         ]}
                         wrapper="span"
                         speed={10}
-                        className="typewrite text-yellow-500"
+                        style={{ color: '#A6D219' }}
                         repeat={Infinity}
                         cursor={false}
-                        />
+                     />
                      </h4>
                     {/*
                     <p className="text-white/70 text-lg max-w-xl mx-auto">Create, collaborate, and turn your ideas into incredible products with the definitive platform for digital design.</p>
@@ -63,13 +63,14 @@ export default function IndexFour(){
          </section>
 
         <section className="relative md:pb-24 pb-16 -mt-[74px]">
-            <DomainList/>
+           
+            <ServerTwo/>
             <PricingTwo priceClass="container relative md:mt-24 mt-16"/>
             <HostingServices title="Servicios de web hosting"/>
             <ServerOne/>
-            <ServerTwo/>
             <Faq/>
             <Newsletter/>
+            <DomainList/>
         </section>
         <Footer/>
         <Switcher/>

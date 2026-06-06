@@ -7,6 +7,15 @@ import org from '../assets/images/shop/org.jpg'
 import tv from '../assets/images/shop/tv.jpg'
 import us from '../assets/images/shop/us.jpg'
 
+import Centos from '../assets/images/shop/Centos.png'
+import Cpanel from '../assets/images/shop/Cpanel.png'
+import icann from '../assets/images/shop/icann.png'
+import mx from '../assets/images/shop/mx.png'
+import mysql from '../assets/images/shop/mysql.png'
+import php from '../assets/images/shop/php.png'
+import Wordpress from '../assets/images/shop/Wordpress.png'
+
+
 import blog1 from '../assets/images/blog/1.jpg'
 import blog2 from '../assets/images/blog/2.jpg'
 import blog3 from '../assets/images/blog/3.jpg'
@@ -424,6 +433,31 @@ export const domainData = [
         image:usImg,
         amount:'3.99'
     },
+]
+
+export const partnersData = [
+    {
+        image:Centos
+    },
+    {
+        image:Cpanel
+    },
+    {
+        image:mysql
+    },
+    {
+        image:php
+    },
+    {
+        image:Wordpress
+    },
+    {
+        image:icann
+    },
+    {
+        image:mx
+    },
+    
 ]
 
 export const serviceData2 = [

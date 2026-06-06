@@ -18,7 +18,7 @@ export default function PricingTwo({title,priceClass}){
                             <button onClick={()=>setActiveIndex(0)} className={`${activeIndex === 0 ? 'px-4 py-1 text-sm font-semibold rounded-full w-full transition-all duration-500 ease-in-out text-white bg-sky-500' : ' px-4 py-1 text-sm font-semibold rounded-full w-full hover:text-sky-500 transition-all duration-500 ease-in-out'}`} >Mensual</button>
                         </li>
                         <li role="presentation" className="inline-block">
-                            <button onClick={()=>setActiveIndex(1)}  className={`${activeIndex === 1 ? 'px-4 py-1 text-sm font-semibold rounded-full w-full transition-all duration-500 ease-in-out text-white bg-sky-500' : ' px-4 py-1 text-sm font-semibold rounded-full w-full hover:text-sky-500 transition-all duration-500 ease-in-out'}`} >Anual <span className="bg-amber-500 text-white text-xs font-bold px-2.5 py-0.5 rounded-full h-5 ms-1">Ahorra 25%!!</span></button>
+                            <button onClick={()=>setActiveIndex(1)}  className={`${activeIndex === 1 ? 'px-4 py-1 text-sm font-semibold rounded-full w-full transition-all duration-500 ease-in-out text-white bg-sky-500' : ' px-4 py-1 text-sm font-semibold rounded-full w-full hover:text-sky-500 transition-all duration-500 ease-in-out'}`} >Anual <span className="bg-green-600 text-white text-xs font-bold px-2.5 py-0.5 rounded-full h-5 ms-1">Ahorra 25%!!</span></button>
                         </li>
                     </ul>
 
@@ -83,11 +83,14 @@ export default function PricingTwo({title,priceClass}){
                                             <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">WordPress listo para personalizar</span></li>
                                             <li className="mb-1 flex"><AiOutlineCheckCircle className="text-red-600 text-[20px] align-middle me-2"/> <span className="">Base de datos MySQL</span></li>
                                         </ul>
-                                        <Link to="" className="inline-block px-8 py-2.5 text-[16px] font-medium tracking-wide bg-transparent hover:bg-sky-500 border border-gray-100 dark:border-gray-800 hover:border-sky-500 dark:hover:border-sky-500 text-slate-900 dark:text-white hover:text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-md text-center align-middle transition-all duration-500 w-full mt-5">Contactanos</Link>
+                                        <Link to="" className="inline-block px-8 py-2.5 text-[16px] font-medium tracking-wide bg-transparent border-gray-100 dark:border-gray-800 dark:hover:border-sky-500 text-slate-900 dark:text-white hover:text-white focus:ring-[3px] focus:outline-none rounded-md text-center align-middle transition-all duration-500 w-full mt-5">Contactanos</Link>
                                     </div>
                 
                                     <div className="group relative overflow-hidden shadow-lg dark:shadow-gray-800 rounded-md bg-white dark:bg-slate-900 h-fit">
-                                        <div className="bg-gradient-to-tr from-sky-500 to-blue-700 text-white py-2 px-6 h6 text-lg font-medium">Popular</div>
+                                        <div className="text-white py-2 px-6 h6 text-lg font-medium"  style={{   background: 'linear-gradient(20deg, #BBF451, #008235)'}}
+                                            >
+                                                Popular
+                                            </div>
                                         <div className="p-6">
                                             <h6 className="font-medium mb-5 text-xl">Negocio</h6>
                 
