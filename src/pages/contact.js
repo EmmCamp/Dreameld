@@ -15,34 +15,41 @@ export default function Contact() {
         <>
            <Navbar navClass="defaultscroll is-sticky" ulClass='navigation-menu justify-end' />
 
-{/* LE ASIGNAMOS EL MORADO EN MODO DÍA CON UN STYLE LIMPIO (SIN EXTRA-CAPAS) */}
-<section 
-    className="relative table w-full md:py-40 py-36 bg-[url('../../assets/images/bg/bg5.png')] bg-center bg-cover"
-    style={{ 
-        backgroundColor: document.documentElement.classList.contains('dark') ? 'transparent' : 'rgba(30, 7, 68, 0.0)' 
-    }}
->
-    {/* CAPA DE OPACIDAD QUE RESPETA EL MODO OSCURO ORIGINAL DE LA PLANTILLA */}
-    <div className="absolute inset-0 bg-sky-500/5 dark:bg-slate-950/80"></div>
-    
-    <div className="container relative" style={{ zIndex: 2 }}>
-        <div className="grid grid-cols-1 text-center mt-12">
-            <h3 className="md:text-4xl text-3xl md:leading-snug leading-snug font-medium text-slate-900 dark:text-white">
-                Contáctanos
-            </h3>
-        </div>
-    </div>
+            {/* MODIFICADO: Asignamos un fondo morado oscuro contrastante (rgba 30, 7, 68, 0.85) SOLO en modo día para que resalte el logo */}
+            <section 
+                className="relative table w-full md:py-40 py-36 bg-[url('../../assets/images/bg/bg5.png')] bg-center bg-cover"
+                style={{ 
+                    backgroundColor: document.documentElement.classList.contains('dark') ? 'transparent' : 'rgba(30, 7, 68, 0.85)' 
+                }}
+            >
+                {/* MODIFICADO: Ajustamos las capas de opacidad para que en modo día no interfiera con el nuevo fondo oscuro */}
+                <div className="absolute inset-0 bg-transparent dark:bg-slate-950/80"></div>
+                
+                <div className="container relative" style={{ zIndex: 2 }}>
+                    <div className="grid grid-cols-1 text-center mt-12">
+                        {/* MODIFICADO: Cambiamos text-slate-900 por text-white en modo día, ya que ahora el fondo de la sección será oscuro */}
+                        <h3 className="md:text-4xl text-3xl md:leading-snug leading-snug font-medium text-white dark:text-white">
+                            Contáctanos
+                        </h3>
+                    </div>
+                </div>
 
-
-
+                {/* MODIFICADO: Cambiamos las clases del breadcrumb para que los textos sean legibles (blancos/grises) sobre el nuevo fondo oscuro del modo día */}
                 <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
                     <ul className="tracking-[0.5px] mb-0 inline-block">
-                        <li className="inline-block text-[15px] font-medium duration-500 ease-in-out hover:text-sky-500"><Link to="/index">DREAMELD</Link></li>
-                        <li className="inline-block text-[15px] ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
-                        <li className="inline-block text-[15px] font-medium duration-500 ease-in-out" style={{ color: '#7c3aed' }}>Contacto</li>
+                        <li className="inline-block text-[15px] font-medium duration-500 ease-in-out text-white/80 hover:text-sky-400">
+                            <Link to="/index">DREAMELD</Link>
+                        </li>
+                        <li className="inline-block text-[15px] text-white/60 ltr:rotate-0 rtl:rotate-180">
+                            <i className="mdi mdi-chevron-right"></i>
+                        </li>
+                        <li className="inline-block text-[15px] font-medium duration-500 ease-in-out" style={{ color: '#a78bfa' }}>
+                            Contacto
+                        </li>
                     </ul>
                 </div>
             </section>
+
             <div className="relative">
                 <div className="shape absolute start-0 end-0 sm:-bottom-px -bottom-[2px] overflow-hidden z-1 text-white dark:text-slate-900">
                     <svg className="w-full h-auto" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,14 +57,11 @@ export default function Contact() {
                     </svg>
                 </div>
             </div>
+
             <section className="relative lg:py-24 py-16">
                 <div className="container">
                     <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
                         <div className="lg:col-span-7 md:col-span-6">
-
-                            {/* === Imagen aun lado del formulario anterior === */}
-                            {/* <img src={contactImg} alt="" />*/}
-                            {/* === Imagen anterior=== */}
                             <img
                                 src="/soporte-dreameld.png"
                                 className="w-full h-auto object-contain rounded-2xl shadow-md"
@@ -69,51 +73,51 @@ export default function Contact() {
                         <div className="lg:col-span-5 md:col-span-6">
                             <div className="lg:ms-5">
                                 <div className="bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-700 p-6">
-                                    <h3 className="mb-6 text-2xl leading-normal font-medium">¡Ponte en contacto!</h3>
+                                    <h3 className="mb-6 text-2xl leading-normal font-medium dark:text-white">¡Ponte en contacto!</h3>
 
-                                    <form >
-                                        <p className="mb-0" id="error-msg"></p>
-                                        <div id="simple-msg"></div>
-                                        <div className="grid lg:grid-cols-12 lg:gap-6">
-                                            <div className="lg:col-span-6 mb-5">
-                                                <label htmlFor="name" className="font-medium">Tú nombre:</label>
-                                                <input name="name" id="name" type="text" className="form-input w-full text-[15px] py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-lg outline-none border border-gray-200 focus:border-sky-500 dark:border-gray-800 dark:focus:border-sky-500 focus:ring-0 mt-2" placeholder="Nombre :" />
-                                            </div>
+                                    <form>
+    <p className="mb-0" id="error-msg"></p>
+    <div id="simple-msg"></div>
+    <div className="grid lg:grid-cols-12 lg:gap-6">
+        <div className="lg:col-span-6 mb-5">
+            <label htmlFor="name" className="font-medium dark:text-slate-300">Nombre completo</label>
+            <input name="name" id="name" type="text" className="form-input w-full text-[15px] py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-lg outline-none border border-gray-200 focus:border-sky-500 dark:border-gray-800 dark:focus:border-sky-500 focus:ring-0 mt-2" placeholder="Ej. Juan Pérez" />
+        </div>
 
-                                            <div className="lg:col-span-6 mb-5">
-                                                <label htmlFor="email" className="font-medium">Tu correo electrónico:</label>
-                                                <input name="email" id="email" type="email" className="form-input w-full text-[15px] py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-lg outline-none border border-gray-200 focus:border-sky-500 dark:border-gray-800 dark:focus:border-sky-500 focus:ring-0 mt-2" placeholder="Correo electrónico :" />
-                                            </div>
-                                        </div>
+        <div className="lg:col-span-6 mb-5">
+            <label htmlFor="email" className="font-medium dark:text-slate-300">Correo electrónico</label>
+            <input name="email" id="email" type="email" className="form-input w-full text-[15px] py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-lg outline-none border border-gray-200 focus:border-sky-500 dark:border-gray-800 dark:focus:border-sky-500 focus:ring-0 mt-2" placeholder="ejemplo@correo.com" />
+        </div>
+    </div>
 
-                                        <div className="grid grid-cols-1">
-                                            <div className="mb-5">
-                                                <label htmlFor="subject" className="font-medium">Tú Mensaje o Dudas:</label>
-                                                <input name="subject" id="subject" className="form-input w-full text-[15px] py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-lg outline-none border border-gray-200 focus:border-sky-500 dark:border-gray-800 dark:focus:border-sky-500 focus:ring-0 mt-2" placeholder="Mensaje :" />
-                                            </div>
+    <div className="grid grid-cols-1">
+        <div className="mb-5">
+            <label htmlFor="subject" className="font-medium dark:text-slate-300">Asunto</label>
+            <input name="subject" id="subject" className="form-input w-full text-[15px] py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-lg outline-none border border-gray-200 focus:border-sky-500 dark:border-gray-800 dark:focus:border-sky-500 focus:ring-0 mt-2" placeholder="¿En qué te podemos ayudar?" />
+        </div>
 
-                                            <div className="mb-5">
-                                                <label htmlFor="comments" className="font-medium">Tú Comentario:</label>
-                                                <textarea name="comments" id="comments" className="form-input w-full text-[15px] py-2 px-3 h-28 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-lg outline-none border border-gray-200 focus:border-sky-500 dark:border-gray-800 dark:focus:border-sky-500 focus:ring-0 mt-2" placeholder="Mensaje :"></textarea>
-                                            </div>
-                                        </div>
+        <div className="mb-5">
+            <label htmlFor="comments" className="font-medium dark:text-slate-300">Mensaje</label>
+            <textarea name="comments" id="comments" className="form-input w-full text-[15px] py-2 px-3 h-28 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-lg outline-none border border-gray-200 focus:border-sky-500 dark:border-gray-800 dark:focus:border-sky-500 focus:ring-0 mt-2" placeholder="Escribe aquí los detalles de tu consulta..."></textarea>
+        </div>
+    </div>
                                         <button
                                             type="submit"
                                             id="submit"
                                             name="send"
                                             className="inline-block px-8 py-2.5 text-[16px] font-medium tracking-wide text-white focus:ring-[3px] rounded-md text-center align-middle transition-all duration-500"
                                             style={{
-                                                backgroundColor: '#7c3aed', // Morado Dreameld Base
+                                                backgroundColor: '#7c3aed', 
                                                 borderColor: '#7c3aed',
                                                 borderWidth: '1px',
-                                                boxShadow: '0 4px 6px -1px rgba(124, 58, 237, 0.3)', // Sombrilla sutil
+                                                boxShadow: '0 4px 6px -1px rgba(124, 58, 237, 0.3)', 
                                             }}
                                             onMouseOver={(e) => {
-                                                e.currentTarget.style.backgroundColor = '#6d28d9'; // Morado más oscuro en hover
+                                                e.currentTarget.style.backgroundColor = '#6d28d9'; 
                                                 e.currentTarget.style.borderColor = '#6d28d9';
                                             }}
                                             onMouseOut={(e) => {
-                                                e.currentTarget.style.backgroundColor = '#7c3aed'; // Volver al color base
+                                                e.currentTarget.style.backgroundColor = '#7c3aed'; 
                                                 e.currentTarget.style.borderColor = '#7c3aed';
                                             }}
                                         >
@@ -127,20 +131,17 @@ export default function Contact() {
                 </div>
 
                 <div className="container lg:mt-24 mt-16">
-
                     <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[30px]">
                         <div className="text-center px-6">
                             <div className="relative">
-                                {/* Usamos style para obligar al fondo morado clarito */}
                                 <div className="w-14 h-14 rounded-xl text-2xl flex align-middle justify-center items-center mx-auto shadow-sm dark:shadow-gray-800" style={{ backgroundColor: 'rgba(147, 51, 234, 0.1)' }}>
-                                    {/* Forzamos el color morado directo en el icono con style */}
                                     <BsTelephone style={{ color: '#9333ea', width: '24px', height: '24px' }} />
                                 </div>
                             </div>
 
                             <div className="content mt-7">
-                                <h5 className="title h5 text-lg font-medium">Teléfono de Soporte</h5>
-                                <p className="text-slate-400 mt-3">Atención rápida y personalizada.</p><p>Resolvemos tus dudas en minutos para que no te detengas.</p>
+                                <h5 className="title h5 text-lg font-medium dark:text-white">Teléfono de Soporte</h5>
+                                <p className="text-slate-400 mt-3">Atención rápida y personalizada.</p><p className="dark:text-slate-300">Resolvemos tus dudas en minutos para que no te detengas.</p>
 
                                 <div className="mt-4">
                                     <li className="inline-block text-[15px] font-medium duration-500 ease-in-out" style={{ color: '#7c3aed' }}>449 123 4567</li>
@@ -156,8 +157,8 @@ export default function Contact() {
                             </div>
 
                             <div className="content mt-7">
-                                <h5 className="title h5 text-lg font-medium">Correo de Ventas y Dudas</h5>
-                                <p className="text-slate-400 mt-3">Escríbenos para cotizaciones especiales o soporte técnico experto.</p><p>Respondemos a la brevedad.</p>
+                                <h5 className="title h5 text-lg font-medium dark:text-white">Correo de Ventas y Dudas</h5>
+                                <p className="text-slate-400 mt-3">Escríbenos para cotizaciones especiales o soporte técnico experto.</p><p className="dark:text-slate-300">Respondemos a la brevedad.</p>
 
                                 <div className="mt-4">
                                     <li className="inline-block text-[15px] font-medium duration-500 ease-in-out" style={{ color: '#7c3aed' }}>Contacto@dreameld.com.mx</li>
@@ -173,7 +174,7 @@ export default function Contact() {
                             </div>
 
                             <div className="content mt-7">
-                                <h5 className="title h5 text-lg font-medium">Contacto Directo</h5>
+                                <h5 className="title h5 text-lg font-medium dark:text-white">Contacto Directo</h5>
                                 <p className="text-slate-400 mt-3">¿Prefieres hablar con un humano? Llámanos o escríbenos por WhatsApp para soporte rápido o ventas. <br /></p>
 
                                 <div className="mt-4">

@@ -152,7 +152,7 @@ export default function Footer() {
     title="Contáctanos por WhatsApp"
     style={{
         position: 'fixed',
-        bottom: '30px',
+        bottom: '100px', // MODIFICADO: Subimos el botón para que no tape la flecha de arriba
         right: '30px',
         backgroundColor: '#25D366',
         color: 'white',
@@ -166,6 +166,9 @@ export default function Footer() {
         zIndex: 999999,
     }}
 >
+    {/* Aquí va tu icono de WhatsApp actual */}
+</a>
+
     {/* SVG Nativo de WhatsApp (Cero imports, cero errores) */}
     <svg 
         viewBox="0 0 24 24" 
