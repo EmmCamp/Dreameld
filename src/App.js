@@ -77,6 +77,7 @@ function App() {
       <Route path='/thankyou' exact element={<ThankYou/>}/>
       <Route path='/contact' exact element={<Contact/>}/>
       <Route path='/software' exact element={<Software/>}/>
+      <Route path='/servicios' exact element={<IndexThree/>}/>
     </Routes>
    
   );

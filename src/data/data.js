@@ -15,6 +15,10 @@ import mysql from '../assets/images/shop/mysql.png'
 import php from '../assets/images/shop/php.png'
 import Wordpress from '../assets/images/shop/Wordpress.png'
 
+import automationImg from "../assets/images/consulting/automation.png";
+import licensingImg from "../assets/images/consulting/licensing.png";
+import hardwareImg from "../assets/images/consulting/hardware.png";
+import webImg from "../assets/images/consulting/web-development.png";
 
 import blog1 from '../assets/images/blog/1.jpg'
 import blog2 from '../assets/images/blog/2.jpg'
@@ -639,6 +643,82 @@ export  const FeatureData2 = [
    
 ]
 
+export  const servicios = [
+    {
+        icon:VscServer,
+        title:'Automatizaciones',
+        desc:'Automizaciones tareas repetitvas mediante software desarrollado a la medida'
+    },
+    {
+        icon:TbCloudHeart,
+        title:'Licenciamiento',
+        desc:'Licencias originales para empresas'
+    },
+
+    {
+        icon:LuUsers,
+        title:'Tecnología',
+        desc:'Cotizamos equipos de acuerdo con las necesidadesespecíficas de tu empresa.'
+    },
+    {
+        icon:BiTachometer,
+        title:'Desarrollo web',
+        desc:'Desarrollamos sitios web, plataformas y aplicaciones empresariales a medida, enfocadas en mejorar la operación, productividad y presencia digital de tu negocio.'
+    },
+  
+
+]
+
+export const serviciosC = [
+    {
+        image: automationImg,
+        badge: "AUTOMATIZACIÓN",
+        title: "Optimiza procesos y elimina tareas repetitivas",
+        desc: "Desarrollamos soluciones de software a medida que automatizan operaciones, conectan sistemas y mejoran la eficiencia de tu organización.",
+        features: [
+            "Automatización de procesos operativos",
+            "Integración entre sistemas y plataformas",
+            "Generación automática de reportes",
+            "Reducción de errores manuales"
+        ]
+    },
+    {
+        image: licensingImg,
+        badge: "LICENCIAMIENTO",
+        title: "Software empresarial con respaldo oficial",
+        desc: "Te ayudamos a implementar y administrar licencias Microsoft para mantener tu infraestructura segura, actualizada y preparada para crecer.",
+        features: [
+            "Microsoft 365",
+            "Windows Profesional y Empresarial",
+            "Asesoría especializada",
+            "Implementación y migración"
+        ]
+    },
+    {
+        image: hardwareImg,
+        badge: "INFRAESTRUCTURA",
+        title: "Tecnología diseñada para las necesidades de tu negocio",
+        desc: "Cotizamos y suministramos equipos de cómputo, estaciones de trabajo y soluciones tecnológicas alineadas a tus objetivos operativos.",
+        features: [
+            "Equipos para oficina",
+            "Workstations profesionales",
+            "Equipos para desarrollo",
+            "Soluciones escalables"
+        ]
+    },
+    {
+        image: webImg,
+        badge: "DESARROLLO WEB",
+        title: "Construimos experiencias digitales que generan resultados",
+        desc: "Diseñamos y desarrollamos sitios web, plataformas empresariales y aplicaciones web enfocadas en impulsar la presencia digital y productividad de tu empresa.",
+        features: [
+            "Sitios corporativos",
+            "Aplicaciones web",
+            "Portales empresariales",
+            "Integraciones personalizadas"
+        ]
+    }
+];
 export const priceData=[
     {
         titit:'Starter',

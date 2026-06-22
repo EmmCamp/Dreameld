@@ -5,7 +5,6 @@ import bannerone from '../assets/images/4.png'
 
 import Navbar from "../components/navbar";
 import Tagline from "../components/tagline";
-import Card from "../components/card";
 import PricingOne from "../components/pricingOne";
 import ClientOne from "../components/clientOne";
 import Faq from "../components/faq";
@@ -19,7 +18,7 @@ import "../../node_modules/react-modal-video/css/modal-video.css"
 import { servicios } from "../data/data";
 
 import {FiHexagon} from '../assets/icons/vander'
-
+import ServerTwo from "../components/serverTwo";
 
 export default function IndexThree(){
     let [isOpen, setOpen] = useState(false);
@@ -28,7 +27,7 @@ export default function IndexThree(){
         <Tagline/>
         <Navbar navClass= "defaultscroll is-sticky tagline-height" ulClass='navigation-menu justify-end nav-light' navLight={true}/>
 
-        <section className="relative lg:py-44 py-36 bg-gradient-to-br from-violet-700 to-emerald-500">
+        <section className="relative lg:py-44 py-36 bg-gradient-to-br from-sky-600 to-yellow-500">
             <div className="absolute inset-0 bg-[url('../../assets/images/bg/shape-1.png')] bg-center bg-cover"></div>
             <div className="container relative">
                 <div className="relative grid md:grid-cols-12 grid-cols-1 items-center mt-10 gap-[30px]">
@@ -36,15 +35,11 @@ export default function IndexThree(){
                         <div className="me-6">
                            {/**<div className="bg-white dark:bg-slate-900 text-slate-400 py-2 px-4 inline-flex items-center font-medium rounded-full shadow dark:shadow-gray-800 mb-2"><span className="bg-yellow-500 text-white text-[12px] font-bold px-2.5 py-0 rounded-full me-2">Hosting</span> 99.9% Uptime Guarantee</div>*/}
                             <h4 className="font-semibold lg:leading-normal leading-normal text-4xl lg:text-5xl mb-5 text-white">Consultoría Tecnológica</h4>
-                            <p className="text-white/70 max-w-xl">Ayudamos a empresas a modernizar su operación mediante
-                                                                     automatización, infraestructura tecnológica, licenciamiento
-                                                                    empresarial y desarrollo de software a medida.</p>
+                            <p className="text-white/70 max-w-xl">Ayudamos a tu negocio a adoptar tecnológia para crecer</p>
                         
                             <div className="mt-6">
-                            
-                                <Link to="/aboutus" className="inline-block px-8 py-2.5 text-[16px] font-medium tracking-wide bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-md text-center align-middle transition-all duration-500">Contactanos</Link>
-                                {/*<Link to="#!" onClick={() => setOpen(true)} data-type="youtube" data-id="S_CGed6E610" className="h-11 w-11 inline-flex items-center justify-center tracking-wide align-middle transition duration-500 ease-in-out text-base text-center bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-full ms-1 lightbox"><i className="mdi mdi-play text-xl align-middle"></i></Link><small className="text-sm font-semibold uppercase align-middle text-white ms-2">Watch Now</small>
-                            */}
+                                <Link to="" className="inline-block px-8 py-2.5 text-[16px] font-medium tracking-wide bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-md text-center align-middle transition-all duration-500">Registration</Link>
+                                <Link to="#!" onClick={() => setOpen(true)} data-type="youtube" data-id="S_CGed6E610" className="h-11 w-11 inline-flex items-center justify-center tracking-wide align-middle transition duration-500 ease-in-out text-base text-center bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-full ms-1 lightbox"><i className="mdi mdi-play text-xl align-middle"></i></Link><small className="text-sm font-semibold uppercase align-middle text-white ms-2">Watch Now</small>
                             </div>
                         </div>
                     </div>
@@ -94,9 +89,18 @@ export default function IndexThree(){
                 </div>
             </div>
            
+            
+         
+            <div className="container relative md:mt-24 mt-16">
+                <div className="relative grid grid-cols-1 pb-8 text-center z-1">
+                    <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium">Trusted by more than 10K users</h3>
 
-            <Card/>
-
+                    <p className="text-slate-400 max-w-xl mx-auto">Create, collaborate, and turn your ideas into incredible products with the definitive platform for digital design.</p>
+                </div>
+                <ClientOne clientClass="grid grid-cols-1 relative mt-8"/>
+            </div>
+            
+            <Faq/>
            <Newsletter/>
         </section>
         <Footer/>
