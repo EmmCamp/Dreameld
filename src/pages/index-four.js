@@ -69,7 +69,6 @@ export default function IndexFour(){
             <HostingServices title="Servicios de web hosting"/>
             <ServerOne/>
             <Faq/>
-            <Newsletter/>
             <DomainList/>
         </section>
         <Footer/>

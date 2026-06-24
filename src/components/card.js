@@ -33,7 +33,7 @@ export default function Card() {
                         </ul>
 
                         <div className="mt-4">
-                            <Link to="/aboutus" className="relative inline-flex items-center tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-sky-500 hover:text-sky-500 after:bg-sky-500 duration-500 ease-in-out">Conoce más <MdKeyboardArrowRight className="me-1 text-lg"/></Link>
+                            <Link to="/aboutus" className="relative inline-flex items-center tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-violet-500 hover:text-emerald-500 after:bg-emerald-500 duration-500 ease-in-out">Conoce más <MdKeyboardArrowRight className="me-1 text-lg"/></Link>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@ export default function Card() {
                         </ul>
 
                         <div className="mt-4">
-                            <Link to="/aboutus" className="relative inline-flex items-center tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-sky-500 hover:text-sky-500 after:bg-sky-500 duration-500 ease-in-out">Conoce más <MdKeyboardArrowRight className="me-1 text-lg"/></Link>
+                            <Link to="/aboutus" className="relative inline-flex items-center tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-violet-500 hover:text-emerald-500 after:bg-emerald-500 duration-500 ease-in-out">Conoce más <MdKeyboardArrowRight className="me-1 text-lg"/></Link>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ export default function Card() {
                         </ul>
 
                         <div className="mt-4">
-                            <Link to="/aboutus" className="relative inline-flex items-center tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-sky-500 hover:text-sky-500 after:bg-sky-500 duration-500 ease-in-out">Conoce más <MdKeyboardArrowRight className="me-1 text-lg"/></Link>
+                            <Link to="/aboutus" className="relative inline-flex items-center tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-violet-500 hover:text-emerald-500 after:bg-emerald-500 duration-500 ease-in-out">Conoce más <MdKeyboardArrowRight className="me-1 text-lg"/></Link>
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@ export default function Card() {
                         </ul>
 
                         <div className="mt-4">
-                            <Link to="/aboutus" className="relative inline-flex items-center tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-sky-500 hover:text-sky-500 after:bg-sky-500 duration-500 ease-in-out">Conoce más <MdKeyboardArrowRight className="me-1 text-lg"/></Link>
+                            <Link to="/aboutus" className="relative inline-flex items-center tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-violet-500 hover:text-emerald-500 after:bg-emerald-500 duration-500 ease-in-out">Conoce más <MdKeyboardArrowRight className="me-1 text-lg"/></Link>
                         </div>
                     </div>
                 </div>

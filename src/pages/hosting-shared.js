@@ -26,9 +26,9 @@ export default function HostingShared(){
                     <p className="text-slate-400 text-[17px] max-w-xl mx-auto">Recibe soporte real por WhatsApp y administra tus servicios sin complicaciones ni tecnicismos.</p>
 
                     <ul className="tracking-[0.5px] mt-6 inline-block">
-                        <li className="inline-block uppercase text-[13px] font-semibold duration-500 ease-in-out hover:text-sky-500"><Link to="/index">Dreameld</Link></li>
+                        <li className="inline-block uppercase text-[13px] font-semibold duration-500 ease-in-out hover:text-violet-500"><Link to="/index">Dreameld</Link></li>
                         <li className="inline-block ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
-                        <li className="inline-block uppercase text-[13px] font-semibold text-sky-500" aria-current="page">Hospedaje web compartido</li>
+                        <li className="inline-block uppercase text-[13px] font-semibold text-violet-500 dark:text-emerald-500" aria-current="page">Hospedaje web compartido</li>
                     </ul>
                 </div>
             </div>
@@ -54,10 +54,10 @@ export default function HostingShared(){
                     {FeatureData2.slice(0,4).map((item,index) => {
                         let Icon = item.icon
                         return(
-                            <div className="group relative p-6 shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 hover:bg-sky-500 dark:hover:bg-sky-500 transition-all duration-500 ease-in-out rounded-md bg-white dark:bg-slate-900 overflow-hidden" key={index}>
+                            <div className="group relative p-6 shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 hover:bg-violet-500 dark:hover:bg-emerald-500 transition-all duration-500 ease-in-out rounded-md bg-white dark:bg-slate-900 overflow-hidden" key={index}>
                                 <div className="relative overflow-hidden text-transparent -m-3">
                                     <FiHexagon className="h-24 w-24 fill-sky-500/[0.07] group-hover:fill-white/20"/>
-                                    <div className="absolute top-2/4 -translate-y-2/4 start-8 text-sky-500 rounded-md group-hover:text-white transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center">
+                                    <div className="absolute top-2/4 -translate-y-2/4 start-8 text-emerald-500 dark:text-violet-500 rounded-md group-hover:text-white transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center">
                                     <Icon/>
                                     </div>
                                 </div>

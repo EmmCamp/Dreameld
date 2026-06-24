@@ -136,13 +136,7 @@ export default function AboutUs() {
                                 <div className="mt-6">
                                     <Link
                                         to="/contact"
-                                        className="inline-flex items-center px-8 py-2.5 text-[16px] font-medium tracking-wide text-white rounded-md text-center align-middle transition-all duration-500 hover:opacity-90 shadow-lg"
-                                        style={{
-                                            backgroundColor: '#16082c',
-                                            borderColor: '#16082c',
-                                            borderWidth: '1px',
-                                            borderStyle: 'solid'
-                                        }}
+                                        className="inline-flex items-center px-8 py-2.5 text-[16px] font-medium tracking-wide text-white bg-violet-500 dark:bg-emerald-500 rounded-md text-center align-middle transition-all duration-500 hover:opacity-90 shadow-lg"
                                     >
                                         <MdMailOutline className="me-2 text-white" />
                                         Platica con un experto
@@ -170,17 +164,17 @@ export default function AboutUs() {
        
        return (
             <div 
-                className="group relative p-6 shadow-md dark:shadow-gray-800 hover:shadow-xl hover:border-violet-500 transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-slate-900 overflow-hidden border border-gray-100 dark:border-gray-800" 
+                className="group relative p-6 shadow-md dark:shadow-gray-800 hover:shadow-xl hover:border-violet-500 hover:bg-violet-500 dark:hover:bg-emerald-500 transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-slate-900 overflow-hidden border border-gray-100 dark:border-gray-800" 
                 key={index}
             >
                 {/* Textos de la tarjeta (Títulos y descripciones) */}
-                <div className="relative z-10">
+                <div className="relative z-10 group-hover:text-white">
                     {/* Título: En hover cambia a morado Dreameld para que resalte y NO desaparezca */}
-                    <h5 className="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-[#7c3aed] transition-all duration-500 ease-in-out">
+                    <h5 className="text-lg font-medium group-hover:text-white transition-all duration-500 ease-in-out">
                         {item.title}
                     </h5>
                     {/* Descripción: Espacio pulido y texto legible */}
-                    <p className="text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-all duration-500 ease-in-out mt-3 text-sm leading-relaxed">
+                    <p className="text-slate-400 group-hover:text-white/50 transition-all duration-500 ease-in-out mt-3">
                         {item.desc}
                     </p>
                 </div>
@@ -229,10 +223,10 @@ export default function AboutUs() {
                 e.currentTarget.style.boxShadow = 'none';
             }}
         >
-            <div className="mb-4 rounded-full flex items-center justify-center bg-indigo-50/70" style={{ width: '70px', height: '70px' }}>
-                <FiZap className="text-4xl" style={{ color: '#510bf7' }} />
+            <div className="mb-4 rounded-full flex items-center justify-center  bg-indigo-50/70" style={{ width: '70px', height: '70px' }}>
+                <FiZap className="text-4xl dark:text-emerald-500 text-violet-500"  />
             </div>
-            <h3 className="text-3xl font-bold mb-1" style={{ color: '#16082c' }}>99.99%</h3>
+            <h3 className="text-3xl font-bold mb-1  group-hover:text-white transition-all duration-500 ease-in-out">99.99%</h3>
             <p className="text-slate-500 font-medium text-sm">Uptime Garantizado</p>
         </div>
 
@@ -250,9 +244,9 @@ export default function AboutUs() {
             }}
         >
             <div className="mb-4 rounded-full flex items-center justify-center bg-indigo-50/70" style={{ width: '70px', height: '70px' }}>
-                <FiShield className="text-4xl" style={{ color: '#510bf7' }} />
+                <FiShield className="text-4xl dark:text-emerald-500 text-violet-500" />
             </div>
-            <h3 className="text-3xl font-bold mb-1" style={{ color: '#000000' }}>Seguridad</h3>
+            <h3 className="text-3xl font-bold mb-1  group-hover:text-white transition-all duration-500 ease-in-out">Seguridad</h3>
             <p className="text-slate-500 font-medium text-sm">Certificado SSL gratuito</p>
         </div>
 
@@ -270,9 +264,9 @@ export default function AboutUs() {
             }}
         >
             <div className="mb-4 rounded-full flex items-center justify-center bg-emerald-50/70" style={{ width: '70px', height: '70px' }}>
-                <FiMessageSquare className="text-4xl" style={{ color: '#25D366' }} />
+                <FiMessageSquare className="text-4xl dark:text-emerald-500 text-violet-500"/>
             </div>
-            <h3 className="text-3xl font-bold mb-1" style={{ color: '#000000' }}>&lt; 15 min</h3>
+            <h3 className="text-3xl font-bold mb-1  group-hover:text-white transition-all duration-500 ease-in-out ">&lt; 15 min</h3>
             <p className="text-slate-500 font-medium text-sm">Soporte vía WhatsApp</p>
         </div>
 
@@ -290,9 +284,9 @@ export default function AboutUs() {
             }}
         >
             <div className="mb-4 rounded-full flex items-center justify-center bg-indigo-50/70" style={{ width: '70px', height: '70px' }}>
-                <FiRefreshCw className="text-4xl" style={{ color: '#510bf7' }} />
+                <FiRefreshCw className="text-4xl dark:text-emerald-500 text-violet-500"/>
             </div>
-            <h3 className="text-3xl font-bold mb-1" style={{ color: '#000000' }}>Migración $0</h3>
+            <h3 className="text-3xl font-bold mb-1  group-hover:text-white transition-all duration-500 ease-in-out">Transferencia de información</h3>
             <p className="text-slate-500 font-medium text-sm">Migración gratuita</p>
         </div>
 
@@ -341,7 +335,7 @@ export default function AboutUs() {
                         <AiOutlineQuestionCircle className="h-8 me-3 w-6" style={{ color: '#510bf7' }} />
                         <div className="flex-1">
                             <h5 className="mb-2 text-lg font-medium">¿Necesito conocimientos previos? </h5>
-                            <p className="text-slate-400">No, no necesitas saber de código, servidores ni configuraciones avanzadas para estar con nosotros. <span style={{ color: '#510bf7' }}>Dreameld</span> está pensado para que cualquier persona pueda gestionar su sitio, y para todo lo demás, tienes a nuestro equipo de soporte humano listo para ayudarte en minutos.</p>
+                            <p className="text-slate-400">No, no necesitas saber de código, servidores ni configuraciones avanzadas para estar con nosotros. <span className="dark:text-emerald-500 text-violet-500 ">Dreameld</span> está pensado para que cualquier persona pueda gestionar su sitio, y para todo lo demás, tienes a nuestro equipo de soporte humano listo para ayudarte en minutos.</p>
                         </div>
                     </div>
 

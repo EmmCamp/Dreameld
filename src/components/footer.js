@@ -47,10 +47,10 @@ export default function Footer() {
                     <div>
                         <h5 className="text-white font-semibold tracking-wide text-base mb-6">Servicios</h5>
                         <ul className="list-none space-y-3">
-                            <li><Link to="/licencias" className="text-gray-400 hover:text-white duration-300 block">💻 Licencias Microsoft</Link></li>
-                            <li><Link to="/desarrollo-web" className="text-gray-400 hover:text-white duration-300 block">🌐 Desarrollo Web</Link></li>
-                            <li><Link to="/hosting" className="text-gray-400 hover:text-white duration-300 flex items-center gap-2">
-                                <LuServer className="w-4 h-4 text-[#9333ea]" /> Hosting
+                            <li><Link to="/servicios" className="text-gray-400 hover:text-white duration-300 block">💻 Licencias Microsoft</Link></li>
+                            <li><Link to="/servicios" className="text-gray-400 hover:text-white duration-300 block">🌐 Desarrollo Web</Link></li>
+                            <li><Link to="/hosting-shared" className="text-gray-400 hover:text-white duration-300 flex items-center gap-2"> 
+                                <LuServer className="w-4 h-4 text-[#9333ea]" /> &nbsp; Hosting
                             </Link></li>
                         </ul>
                     </div>

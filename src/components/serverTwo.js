@@ -16,8 +16,8 @@ export default function ServerTwo(){
                         {serverData.map((item, index) =>{
                             let Icon = item.icon
                             return(
-                                <div className="group flex items-center relative overflow-hidden p-6 rounded-md shadow dark:shadow-gray-800 hover:bg-sky-500 dark:hover:bg-sky-500 transition-all duration-500 ease-in-out" key={index}>
-                                    <span className="text-sky-500 group-hover:text-white text-5xl font-semibold transition-all duration-500 ease-in-out">
+                                <div className="group flex items-center relative overflow-hidden p-6 rounded-md shadow dark:shadow-gray-800 hover:bg-emerald-500 dark:hover:bg-violet-500 transition-all duration-500 ease-in-out" key={index}>
+                                    <span className="text-violet-500 dark:text-emerald-500 group-hover:text-white text-5xl font-semibold transition-all duration-500 ease-in-out">
                                         <Icon/>
                                     </span>
                                     <div className="flex-1 ms-3">

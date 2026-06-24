@@ -42,7 +42,9 @@ export default function IndexThree(){
                         
                             <div className="mt-6">
                             
-                                <Link to="/aboutus" className="inline-block px-8 py-2.5 text-[16px] font-medium tracking-wide bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-md text-center align-middle transition-all duration-500">Contactanos</Link>
+                                <Link to="/aboutus" className="inline-block px-8 py-2.5 text-[16px] font-medium tracking-wide bg-violet-600 
+                                hover:bg-emerald-500 border border-violet-600 hover:border-emerald-500 text-white focus:ring-[3px] focus:ring-violet-500 
+                                focus:ring-opacity-25 focus:outline-none rounded-md text-center align-middle transition-all duration-500">Contactanos</Link>
                                 {/*<Link to="#!" onClick={() => setOpen(true)} data-type="youtube" data-id="S_CGed6E610" className="h-11 w-11 inline-flex items-center justify-center tracking-wide align-middle transition duration-500 ease-in-out text-base text-center bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white focus:ring-[3px] focus:ring-sky-500 focus:ring-opacity-25 focus:outline-none rounded-full ms-1 lightbox"><i className="mdi mdi-play text-xl align-middle"></i></Link><small className="text-sm font-semibold uppercase align-middle text-white ms-2">Watch Now</small>
                             */}
                             </div>
@@ -85,8 +87,8 @@ export default function IndexThree(){
                         <div className="relative overflow-hidden text-transparent -m-3" key={index}>
                             <FiHexagon className="sm:h-48 h-40 sm:w-48 w-40 fill-gray-50 dark:fill-slate-800 mx-auto"/>
                             <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto transition-all duration-500 ease-in-out text-4xl grid align-middle justify-center items-center">
-                                <Icon className="text-4xl text-sky-500 mx-auto"/>
-                                <Link to="" className="sm:text-lg text-base font-medium mt-1 h5 text-slate-900 hover:text-sky-500 dark:text-white dark:hover:text-sky-500 transition-all duration-500 ease-in-out">{item.title}</Link>
+                                <Icon className="text-4xl text-violet-600 mx-auto"/>
+                                <Link to="" className="sm:text-lg text-base font-medium mt-1 h5 text-slate-900 hover:text-violet-500 dark:text-white dark:hover:text-emerald-500 transition-all duration-500 ease-in-out">{item.title}</Link>
                             </div>
                         </div>
                         )
