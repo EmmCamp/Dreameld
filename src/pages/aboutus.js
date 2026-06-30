@@ -293,6 +293,7 @@ export default function AboutUs() {
     </div>
 </div>
 
+
             {/* SECCIÓN TEAM MEMBERS */}
            {/*
             <div className="container relative md:mt-24 mt-16">

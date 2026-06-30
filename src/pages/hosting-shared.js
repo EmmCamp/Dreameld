@@ -22,8 +22,8 @@ export default function HostingShared(){
             <div className="absolute inset-0 bg-sky-500/5"></div>
             <div className="container relative">
                 <div className="grid grid-cols-1 text-center mt-12">
-                    <h3 className="text-4xl leading-normal font-semibold mb-6">Hosting rápido, seguro y listo para crecer contigo.</h3>
-                    <p className="text-slate-400 text-[17px] max-w-xl mx-auto">Recibe soporte real por WhatsApp y administra tus servicios sin complicaciones ni tecnicismos.</p>
+                    <h3 className="text-4xl leading-normal font-semibold mb-6">Hosting que crece contigo, sin que tengas que entender de servidores</h3>
+                    <p className="text-slate-400 text-[17px] max-w-xl mx-auto">Empieza con lo que necesitas hoy y sube de plan cuando tu negocio lo pida. Sin contratos largos y sin letra que no puedas leer.</p>
 
                     <ul className="tracking-[0.5px] mt-6 inline-block">
                         <li className="inline-block uppercase text-[13px] font-semibold duration-500 ease-in-out hover:text-violet-500"><Link to="/index">Dreameld</Link></li>
@@ -46,8 +46,8 @@ export default function HostingShared(){
 
             <div className="container relative md:mt-24 mt-16">
                 <div className="grid grid-cols-1 pb-8 text-center">
-                    <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium">¿Porque contratar nuestro servicio de hosting?</h3>
-                    <p className="text-slate-400 max-w-xl mx-auto">Create, collaborate, and turn your ideas into incredible products with the definitive platform for digital design.</p>
+                    <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium">Todo lo que tu negocio necesita para estar en línea</h3>
+                    <p className="text-slate-400 max-w-xl mx-auto">Y si no quieres hacerlo tú, lo hacemos nosotros.</p>
                 </div>
 
                 <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">

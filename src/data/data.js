@@ -468,22 +468,22 @@ export const serviceData2 = [
     {
         icon:VscServer,
         title:'Web Hosting',
-        desc:'Infraestructura rápida y segura para alojar y administrar tus proyectos digitales'
+        desc:'IEl espacio donde vive tu página, rápido y disponible. Tú subes tu sitio (o lo subimos nosotros) y se mantiene en línea.'
     },
     {
         icon:TbCloudHeart,
         title:'Dominios',
-        desc:'Registra y administra dominios profesionales para fortalecer tu presencia en línea'
+        desc:'Registramos y administramos el nombre de tu negocio en internet (tunegocio.com), para que tus clientes te encuentren y te recuerden.'
     },
     {
         icon:MdOutlineMarkEmailRead,
         title:'Correo Eléctronico',
-        desc:'Cuentas de correo empresariales seguras y accesibles desde cualquier lugar'
+        desc:'Cuentas con tu propio dominio (nombre@tunegocio.com) en lugar de un gmail. Se ve más serio y lo revisas desde donde sea.'
     },
     {
         icon:LuUsers,
-        title:'Soporte especializado',
-        desc:'Acompañamiento técnico cercano para ayudarte cuando más lo necesites'
+        title:'Soporte cercano',
+        desc:'Cuando algo falla no quieres un manual: quieres que alguien lo resuelva. Nos escribes por WhatsApp y te acompañamos hasta que quede.'
     },
     {
         icon:BiTachometer,
@@ -527,43 +527,43 @@ export const serverData = [
 export const accordionData = [
     {
         id:1,
-        title:'How does it work ?',
-        desc:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form."
+        title:'¿Qué es un hosting y por qué lo necesito?',
+        desc:<>Es el espacio donde <span style={{ color: '#000000', fontWeight: 'bold' }}> vive</span> tu página para que cualquiera pueda verla en internet. Sin hosting, tu sitio simplemente no está en línea. Nosotros te damos ese espacio y nos encargamos de que funcione.</>
     },
     {
         id:2,
-        title:'Do I need a designer to use Dreameld ?',
-        desc:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form."
+        title:'¿Necesito saber de programación o diseño?',
+        desc:"No. Tú nos dices qué necesitas y nosotros lo dejamos funcionando. Si ya tienes a alguien que te hace la página, también trabajamos con esa persona sin problema."
     },
     {
         id:3,
-        title:'What do I need to do to start selling ?',
-        desc:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form."
+        title:'¿Pueden pasar mi página actual a su hosting?',
+        desc: <>Sí. En el plan Negocio la <span style={{ color: '#000000', fontWeight: 'bold' }}> migración</span> está incluida, y en los demás te ayudamos a moverla. No pierdes nada de lo que ya tienes.</>
     },
     {
-        id:4,
-        title:'What happens when I receive an order ?',
-        desc:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form."
-    },
+    id: 4,
+    title: '¿Qué pasa si mi página se cae o algo deja de funcionar?',
+    desc: <>Nos escribes por <span style={{ color: '#25D366', fontWeight: 'bold' }}>WhatsApp</span> y lo revisamos. No tienes que abrir tickets ni esperar correos: hablas con una persona que te da seguimiento hasta resolverlo.</>
+},
     {
         id:5,
-        title:'How does it work ?',
-        desc:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form."
+        title:'¿El dominio (tunegocio.com) está incluido?',
+        desc: <>El dominio se registra y administra aparte; te ayudamos a <span style={{ color: '#000000', fontWeight: 'bold' }}>conseguirlo</span>  y a configurarlo para que tu página y tu correo usen el nombre de tu negocio.</>
     },
     {
         id:6,
-        title:'Do I need a designer to use Dreameld ?',
-        desc:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form."
+        title:'Puedo usar Wordpress?',
+        desc:"Sí. En los planes Profesional y Negocio viene preinstalado, listo para que empieces a trabajar."
     },
     {
         id:7,
-        title:'What do I need to do to start selling ?',
-        desc:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form."
+        title:'¿Puedo cambiar de plan más adelante?',
+        desc:"Cuando quieras. Empiezas con el que te sirve hoy y subes cuando tu negocio lo pida, sin rehacer tu sitio."
     },
     {
         id:8,
-        title:'What happens when I receive an order ?',
-        desc:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form."
+        title:'¿Cómo pago y puedo cancelar?',
+        desc:"Puedes pagar por mes o por año (el pago anual te sale más barato). Consulta nuestras políticas de reembolso para los detalles."
     },
 ]
 export const clientData2 = [

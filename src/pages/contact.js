@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import contactImg from '../assets/images/contact.svg'
@@ -10,31 +10,69 @@ import Switcher from "../components/switcher";
 import { BsTelephone, LuMail, FiMapPin } from '../assets/icons/vander'
 
 export default function Contact() {
+    // 1. Estados para manejar los datos del formulario y las respuestas
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        comments: ""
+    });
+    const [status, setStatus] = useState({ loading: false, success: null, message: "" });
+
+    // 2. Manejador de cambios en los inputs
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    // 3. Función para enviar los datos al archivo PHP
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus({ loading: true, success: null, message: "" });
+
+        try {
+            // REPLAZA ESTA URL por la ruta real donde subas tu archivo PHP en tu hosting
+            const response = await fetch("https://zona30.shop/contacto.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                setStatus({ loading: false, success: true, message: "¡Mensaje enviado con éxito! Nos comunicaremos pronto." });
+                setFormData({ name: "", email: "", subject: "", comments: "" }); // Limpia el formulario
+            } else {
+                setStatus({ loading: false, success: false, message: result.error || "Hubo un problema al enviar el mensaje." });
+            }
+        } catch (error) {
+            console.error("Error al enviar formulario:", error);
+            setStatus({ loading: false, success: false, message: "Error de conexión con el servidor." });
+        }
+    };
 
     return (
         <>
            <Navbar navClass="defaultscroll is-sticky" ulClass='navigation-menu justify-end' />
 
-            {/* MODIFICADO: Asignamos un fondo morado oscuro contrastante (rgba 30, 7, 68, 0.85) SOLO en modo día para que resalte el logo */}
             <section 
                 className="relative table w-full md:py-40 py-36 bg-[url('../../assets/images/bg/bg5.png')] bg-center bg-cover"
                 style={{ 
                     backgroundColor: document.documentElement.classList.contains('dark') ? 'transparent' : 'rgba(30, 7, 68, 0.85)' 
                 }}
             >
-                {/* MODIFICADO: Ajustamos las capas de opacidad para que en modo día no interfiera con el nuevo fondo oscuro */}
                 <div className="absolute inset-0 bg-transparent dark:bg-slate-950/80"></div>
                 
                 <div className="container relative" style={{ zIndex: 2 }}>
                     <div className="grid grid-cols-1 text-center mt-12">
-                        {/* MODIFICADO: Cambiamos text-slate-900 por text-white en modo día, ya que ahora el fondo de la sección será oscuro */}
                         <h3 className="md:text-4xl text-3xl md:leading-snug leading-snug font-medium text-white dark:text-white">
                             Contáctanos
                         </h3>
                     </div>
                 </div>
 
-                {/* MODIFICADO: Cambiamos las clases del breadcrumb para que los textos sean legibles (blancos/grises) sobre el nuevo fondo oscuro del modo día */}
                 <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
                     <ul className="tracking-[0.5px] mb-0 inline-block">
                         <li className="inline-block text-[15px] font-medium duration-500 ease-in-out text-white/80 hover:text-sky-400">
@@ -75,37 +113,80 @@ export default function Contact() {
                                 <div className="bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-700 p-6">
                                     <h3 className="mb-6 text-2xl leading-normal font-medium dark:text-white">¡Ponte en contacto!</h3>
 
-                                    <form>
-    <p className="mb-0" id="error-msg"></p>
-    <div id="simple-msg"></div>
-    <div className="grid lg:grid-cols-12 lg:gap-6">
-        <div className="lg:col-span-6 mb-5">
-            <label htmlFor="name" className="font-medium dark:text-slate-300">Nombre completo</label>
-            <input name="name" id="name" type="text" className="form-input w-full text-[15px] py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-lg outline-none border border-gray-200 focus:border-sky-500 dark:border-gray-800 dark:focus:border-sky-500 focus:ring-0 mt-2" placeholder="Ej. Juan Pérez" />
-        </div>
+                                    {/* FORMULARIO ACTUALIZADO CON MANEJADORES DE REACT */}
+                                    <form onSubmit={handleSubmit}>
+                                        
+                                        {/* Bloques de notificación dinámicos */}
+                                        {status.message && (
+                                            <div className={`p-3 rounded-lg text-sm mb-4 font-medium ${status.success ? 'bg-emerald-500/10 text-emerald-500' : 'bg-rose-500/10 text-rose-500'}`}>
+                                                {status.message}
+                                            </div>
+                                        )}
 
-        <div className="lg:col-span-6 mb-5">
-            <label htmlFor="email" className="font-medium dark:text-slate-300">Correo electrónico</label>
-            <input name="email" id="email" type="email" className="form-input w-full text-[15px] py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-lg outline-none border border-gray-200 focus:border-sky-500 dark:border-gray-800 dark:focus:border-sky-500 focus:ring-0 mt-2" placeholder="ejemplo@correo.com" />
-        </div>
-    </div>
+                                        <div className="grid lg:grid-cols-12 lg:gap-6">
+                                            <div className="lg:col-span-6 mb-5">
+                                                <label htmlFor="name" className="font-medium dark:text-slate-300">Nombre completo</label>
+                                                <input 
+                                                    name="name" 
+                                                    id="name" 
+                                                    type="text" 
+                                                    value={formData.name}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="form-input w-full text-[15px] py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-lg outline-none border border-gray-200 focus:border-sky-500 dark:border-gray-800 dark:focus:border-sky-500 focus:ring-0 mt-2" 
+                                                    placeholder="Ej. Juan Pérez" 
+                                                />
+                                            </div>
 
-    <div className="grid grid-cols-1">
-        <div className="mb-5">
-            <label htmlFor="subject" className="font-medium dark:text-slate-300">Asunto</label>
-            <input name="subject" id="subject" className="form-input w-full text-[15px] py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-lg outline-none border border-gray-200 focus:border-sky-500 dark:border-gray-800 dark:focus:border-sky-500 focus:ring-0 mt-2" placeholder="¿En qué te podemos ayudar?" />
-        </div>
+                                            <div className="lg:col-span-6 mb-5">
+                                                <label htmlFor="email" className="font-medium dark:text-slate-300">Correo electrónico</label>
+                                                <input 
+                                                    name="email" 
+                                                    id="email" 
+                                                    type="email" 
+                                                    value={formData.email}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="form-input w-full text-[15px] py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-lg outline-none border border-gray-200 focus:border-sky-500 dark:border-gray-800 dark:focus:border-sky-500 focus:ring-0 mt-2" 
+                                                    placeholder="ejemplo@correo.com" 
+                                                />
+                                            </div>
+                                        </div>
 
-        <div className="mb-5">
-            <label htmlFor="comments" className="font-medium dark:text-slate-300">Mensaje</label>
-            <textarea name="comments" id="comments" className="form-input w-full text-[15px] py-2 px-3 h-28 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-lg outline-none border border-gray-200 focus:border-sky-500 dark:border-gray-800 dark:focus:border-sky-500 focus:ring-0 mt-2" placeholder="Escribe aquí los detalles de tu consulta..."></textarea>
-        </div>
-    </div>
+                                        <div className="grid grid-cols-1">
+                                            <div className="mb-5">
+                                                <label htmlFor="subject" className="font-medium dark:text-slate-300">Asunto</label>
+                                                <input 
+                                                    name="subject" 
+                                                    id="subject" 
+                                                    value={formData.subject}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="form-input w-full text-[15px] py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-lg outline-none border border-gray-200 focus:border-sky-500 dark:border-gray-800 dark:focus:border-sky-500 focus:ring-0 mt-2" 
+                                                    placeholder="¿En qué te podemos ayudar?" 
+                                                />
+                                            </div>
+
+                                            <div className="mb-5">
+                                                <label htmlFor="comments" className="font-medium dark:text-slate-300">Mensaje</label>
+                                                <textarea 
+                                                    name="comments" 
+                                                    id="comments" 
+                                                    value={formData.comments}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="form-input w-full text-[15px] py-2 px-3 h-28 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-lg outline-none border border-gray-200 focus:border-sky-500 dark:border-gray-800 dark:focus:border-sky-500 focus:ring-0 mt-2" 
+                                                    placeholder="Escribe aquí los detalles de tu consulta..."
+                                                ></textarea>
+                                            </div>
+                                        </div>
+                                        
                                         <button
                                             type="submit"
                                             id="submit"
                                             name="send"
-                                            className="inline-block px-8 py-2.5 text-[16px] font-medium tracking-wide text-white focus:ring-[3px] rounded-md text-center align-middle transition-all duration-500"
+                                            disabled={status.loading}
+                                            className="inline-block px-8 py-2.5 text-[16px] font-medium tracking-wide text-white focus:ring-[3px] rounded-md text-center align-middle transition-all duration-500 disabled:opacity-50"
                                             style={{
                                                 backgroundColor: '#7c3aed', 
                                                 borderColor: '#7c3aed',
@@ -113,15 +194,19 @@ export default function Contact() {
                                                 boxShadow: '0 4px 6px -1px rgba(124, 58, 237, 0.3)', 
                                             }}
                                             onMouseOver={(e) => {
-                                                e.currentTarget.style.backgroundColor = '#6d28d9'; 
-                                                e.currentTarget.style.borderColor = '#6d28d9';
+                                                if(!status.loading) {
+                                                    e.currentTarget.style.backgroundColor = '#6d28d9'; 
+                                                    e.currentTarget.style.borderColor = '#6d28d9';
+                                                }
                                             }}
                                             onMouseOut={(e) => {
-                                                e.currentTarget.style.backgroundColor = '#7c3aed'; 
-                                                e.currentTarget.style.borderColor = '#7c3aed';
+                                                if(!status.loading) {
+                                                    e.currentTarget.style.backgroundColor = '#7c3aed'; 
+                                                    e.currentTarget.style.borderColor = '#7c3aed';
+                                                }
                                             }}
                                         >
-                                            Enviar Mensaje
+                                            {status.loading ? "Enviando..." : "Enviar Mensaje"}
                                         </button>
                                     </form>
                                 </div>
@@ -130,6 +215,7 @@ export default function Contact() {
                     </div>
                 </div>
 
+                {/* Bloques informativos inferiores de contacto */}
                 <div className="container lg:mt-24 mt-16">
                     <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[30px]">
                         <div className="text-center px-6">
