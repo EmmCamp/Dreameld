@@ -151,10 +151,10 @@ export default function AboutUs() {
     {/* 1. TÍTULO Y SUBTÍTULO MODIFICADOS */}
     <div className="grid grid-cols-1 pb-8 text-center">
         <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-medium text-slate-900 dark:text-white">
-            Nuestros Pilares Tecnológicos
+            ¿Por qué con nosotros?
         </h3>
         <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base">
-            La infraestructura de alto rendimiento es solo el inicio. Nos mueven los valores de la ingeniería transparente y el soporte humano real.
+            Confiable por dentro, simple por fuera
         </p>
     </div>
 

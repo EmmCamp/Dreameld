@@ -345,23 +345,23 @@ export const serviceData = [
 export const pilaresData = [
     {
         icon: LuUsers, 
-        title: 'Misión',
-        desc: 'Impulsar tus ideas digitales con infraestructura de alto rendimiento, eliminando los bots para darte soporte humano real, experto y sin rodeos.'
+        title: 'Disponible cuando te buscan',
+        desc: 'Servidores estables para que tu página no esté caída justo cuando alguien quiere comprarte.'
     },
     {
         icon: VscServer, 
-        title: 'Visión',
-        desc: 'Convertirnos en el aliado tecnológico definitivo de tu negocio, donde la estabilidad de tu plataforma nunca vuelva a depender de una respuesta automatizada.'
+        title: 'Protegido',
+        desc: 'SSL, respaldos y mantenimiento incluidos, para que un problema técnico no se vuelva un problema de tu negocio.'
     },
     {
         icon: MdOutlineMarkEmailRead, 
-        title: 'Transparencia',
-        desc: 'Sin letras chiquitas ni caídas sorpresa. Te hablamos con total claridad y sin rodeos, asumiendo la responsabilidad de la continuidad de tu negocio.'
+        title: 'Creces sin migrar todo',
+        desc: 'Subes de plan cuando lo necesitas, sin tener que rehacer ni mudar tu sitio entero.'
     },
     {
         icon: TbCloudHeart, 
-        title: 'Excelencia',
-        desc: 'Tecnología estable, eficiente y sencilla. Nosotros cuidamos la infraestructura para que tú te enfoques en crecer.'
+        title: 'Sin complicaciones',
+        desc: 'Administras y mejoras tus servicios de forma simple. Y si no quieres hacerlo tú, lo hacemos nosotros.'
     },
 ];
 
@@ -528,7 +528,7 @@ export const accordionData = [
     {
         id:1,
         title:'¿Qué es un hosting y por qué lo necesito?',
-        desc:<>Es el espacio donde <span style={{ color: '#000000', fontWeight: 'bold' }}> vive</span> tu página para que cualquiera pueda verla en internet. Sin hosting, tu sitio simplemente no está en línea. Nosotros te damos ese espacio y nos encargamos de que funcione.</>
+        desc:<>Es el espacio donde <span className='text-black dark:text-white font-bold'> vive</span> tu página para que cualquiera pueda verla en internet. Sin hosting, tu sitio simplemente no está en línea. Nosotros te damos ese espacio y nos encargamos de que funcione.</>
     },
     {
         id:2,
@@ -538,7 +538,7 @@ export const accordionData = [
     {
         id:3,
         title:'¿Pueden pasar mi página actual a su hosting?',
-        desc: <>Sí. En el plan Negocio la <span style={{ color: '#000000', fontWeight: 'bold' }}> migración</span> está incluida, y en los demás te ayudamos a moverla. No pierdes nada de lo que ya tienes.</>
+        desc: <>Sí. En el plan Negocio la <span className='text-black dark:text-white font-bold'> migración</span> está incluida, y en los demás te ayudamos a moverla. No pierdes nada de lo que ya tienes.</>
     },
     {
     id: 4,

@@ -35,10 +35,8 @@ export default function IndexThree(){
                     <div className="md:col-span-7">
                         <div className="me-6">
                            {/**<div className="bg-white dark:bg-slate-900 text-slate-400 py-2 px-4 inline-flex items-center font-medium rounded-full shadow dark:shadow-gray-800 mb-2"><span className="bg-yellow-500 text-white text-[12px] font-bold px-2.5 py-0 rounded-full me-2">Hosting</span> 99.9% Uptime Guarantee</div>*/}
-                            <h4 className="font-semibold lg:leading-normal leading-normal text-4xl lg:text-5xl mb-5 text-white">Consultoría Tecnológica</h4>
-                            <p className="text-white/70 max-w-xl">Ayudamos a empresas a modernizar su operación mediante
-                                                                     automatización, infraestructura tecnológica, licenciamiento
-                                                                    empresarial y desarrollo de software a medida.</p>
+                            <h4 className="font-semibold lg:leading-normal leading-normal text-4xl lg:text-5xl mb-5 text-white">Todo lo que tu negocio necesita para estar en línea</h4>
+                            <p className="text-white/70 max-w-xl">Tú enfócate, nosotros lo hacemos funcionar.</p>
                         
                             <div className="mt-6">
                             
