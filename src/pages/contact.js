@@ -31,7 +31,7 @@ export default function Contact() {
 
         try {
             // REPLAZA ESTA URL por la ruta real donde subas tu archivo PHP en tu hosting
-            const response = await fetch("https://zona30.shop/contacto.php", {
+            const response = await fetch("https://dreameld.com.mx/contacto.php", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
